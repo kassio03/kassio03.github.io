@@ -14,5 +14,22 @@
 }
 
 @layer utilities {
-
+  .font-inter {
+    font-family: "Inter", sans-serif;
+  }
+  .font-italian {
+    font-family: "Italianno", cursive;
+  }
+  .bg-autumn {
+    background: linear-gradient(180deg, #C86A4E 0%, #623426 100%);
+  }
+  .bg-spring {
+    background: linear-gradient(180deg, #4FC565 0%, #265F31 100%);
+  }
+  .bg-summer {
+    background: linear-gradient(180deg, #C3CD3D 0%, #62671E 100%);
+  }
+  .bg-winter {
+    background: linear-gradient(180deg, #7177DF 0%, #3E4179 100%);
+  }
 }
