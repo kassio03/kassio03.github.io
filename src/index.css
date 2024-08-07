@@ -6,7 +6,43 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply bg-solidSeason
+  }
+  :root {
+    --color-solid-primary: 0 0 11; /* #1D1D1D */
+    --color-solid-secondary: 0 0 33; /* #545454 */
+    --color-solid-tertiary: 0 0 42; /* #6C6C6C */
 
+    --color-solid-seasons: 237 53 55; /* #4E54C8 */
+
+    --text-solid-primary: 0 0 100; /* #FFFFFF */
+  }
+  :root[data-theme="light"] {
+    --color-solid-primary: 0 0 100; /* #FFFFFF */
+    --color-solid-secondary: 0 0 77; /* #C5C5C5 */
+    --color-solid-tertiary: 0 0 88; /* #E0E0E0 */
+
+
+    --color-solid-seasons: 237 53 55; /* #4E54C8 */
+
+    --text-solid-primary: 0 0 11; /* #1D1D1D */
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --color-solid-primary: 0 0 100; /* #FFFFFF */
+      --color-solid-secondary: 0 0 77; /* #C5C5C5 */
+      --color-solid-tertiary: 0 0 88; /* #E0E0E0 */
+
+      --color-solid-seasons: 237 53 55; /* #4E54C8 */
+
+      --text-solid-primary: 0 0 11; /* #1D1D1D */
+    }
+  }
+  :root[data-season-theme="autumn"] { --color-solid-seasons: 14 53 55; /* #C86A4E */ }
+  :root[data-season-theme="spring"] { --color-solid-seasons: 131 50 54; /* #4FC565 */ }
+  :root[data-season-theme="summer"] { --color-solid-seasons: 64 59 52; /* #C3CD3D */ }
+  :root[data-season-theme="winter"] { --color-solid-seasons: 237 63 66; /* #7177DF */ }
 }
 
 @layer components {

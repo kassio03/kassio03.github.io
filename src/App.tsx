@@ -4,7 +4,7 @@ import Aside from './components/Aside';
 
 const App = () => {
   return (
-    <main className="flex h-full">
+    <main className="flex h-full text-solidTextPrimary">
       <Aside />
       <Outlet />
     </main>
