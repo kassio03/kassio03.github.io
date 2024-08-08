@@ -2,15 +2,14 @@ import { FunctionComponent, HTMLAttributes, memo } from 'react';
 
 interface IconProps extends HTMLAttributes<HTMLDivElement> {
   Svg: FunctionComponent<React.SVGProps<SVGSVGElement>>;
-  fill?: string;
   highlighted?: boolean;
   //? Stroke como um parametro pode vir a ser necessário.
 }
 
-const Icon = ({ Svg, className, fill, highlighted, ...rest }: IconProps) => {
+const Icon = ({ Svg, className, highlighted, ...rest }: IconProps) => {
   return (
     <div
-      className={`flex h-10 w-10 cursor-pointer items-center justify-center rounded-full ${className} ${highlighted && 'shadow-lg shadow-solidSeason'}`}
+      className={`flex h-10 w-10 cursor-pointer items-center justify-center rounded-full ${className} ${highlighted ? 'shadow-lg shadow-solidSeason' : ''}`}
       {...rest}
     >
       <Svg className="stroke-solidTextPrimary stroke-2" />

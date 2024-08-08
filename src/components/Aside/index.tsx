@@ -36,14 +36,14 @@ const Aside = () => {
     setHighlightedSeason(season);
   }, []);
 
-  //Todo: icone para alternar entre tema light e dark não possui outra cor
   return (
-    <div className="flex h-screen w-full max-w-[360px] flex-col items-center bg-solidPrimary/90">
+    <div className="sticky top-0 hidden h-screen w-full max-w-[360px] flex-col items-center bg-solidPrimary/90 md:flex">
       <div className="flex w-full px-3 pt-2">
         <Icon Svg={Close} className="md:invisible" />
         <Icon
           Svg={themeIcon === 'dark' ? DarkTheme : LightTheme}
-          className="ml-auto bg-slate-200"
+          //Todo: Cor de fundo deste icone não possui outra cor no design original, solução improvisada.
+          className={`ml-auto ${themeIcon === 'dark' ? 'bg-slate-200' : 'bg-stone-300'}`}
           onClick={toggleTheme}
         />
       </div>
@@ -89,7 +89,7 @@ const Aside = () => {
       </div>
       <div>
         <Link to={'/home'} className="mt-11 flex items-center">
-          <Icon Svg={Person} className="mx-2 h-6 w-6" fill="fill-solidTextPrimary" />
+          <Icon Svg={Person} className="mx-2 h-6 w-6" />
           <span className="text-lg">RESUMO PROFISSIONAL</span>
         </Link>
         <Link to={'/functionalities'} className="mt-8 flex items-center">
