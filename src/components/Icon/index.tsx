@@ -12,7 +12,7 @@ const Icon = ({ Svg, className, highlighted, ...rest }: IconProps) => {
       className={`flex h-10 w-10 cursor-pointer items-center justify-center rounded-full ${className} ${highlighted ? 'shadow-lg shadow-solidSeason' : ''}`}
       {...rest}
     >
-      <Svg className="stroke-solidTextPrimary stroke-2" />
+      <Svg className="stroke-solidTextPrimary" />
     </div>
   );
 };

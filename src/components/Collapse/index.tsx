@@ -18,7 +18,7 @@ const Collapse = ({ Svg, title, children, ...rest }: CollapseProps) => {
         onClick={() => setOpened(!opened)}
       >
         <Icon Svg={Svg} className="m-2 mr-0 h-4 w-4" />
-        <h3 className="ml-1 text-sm md:ml-2">{title}</h3>
+        <h3 className="ml-1 text-sm max-[375px]:text-xs md:ml-2">{title}</h3>
         <Icon Svg={ArrowDown} className="ml-auto" />
       </div>
       {opened && children}

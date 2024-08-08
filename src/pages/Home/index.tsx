@@ -9,13 +9,13 @@ import Collapse from '../../components/Collapse';
 
 const Home = () => {
   return (
-    <div className="flex w-full flex-col items-center p-5 md:p-8 lg:p-14">
-      <div className="flex max-w-[962px] overflow-hidden rounded-[28px] bg-solidPrimary/90">
-        <div className="h-[310px] w-full max-w-[314px]">
-          <img src={photo} alt="Foto de Kassio Ferreira" className="min-h-full object-cover" />
-        </div>
+    <div className="flex w-full flex-col items-center p-5 sm:p-8 lg:p-14">
+      <div className="flex max-w-[962px] overflow-hidden rounded-2xl bg-solidPrimary/90 p-6">
         <div className="w-full">
-          <h1>RESUMO</h1>
+          <h1 className="text-center text-lg md:text-3xl">RESUMO</h1>
+          <div className="my-5 w-full overflow-hidden rounded-2xl">
+            <img src={photo} alt="Foto de Kassio Ferreira" className="min-w-full object-cover" />
+          </div>
           <p>
             Meu nome é Kassio Ferreira, nasci em maio de 2021. Meu nome é Kassio Ferreira, nasci em
             maio de 2021. Meu nome é Kassio Ferreira, nasci em maio de 2021. Meu nome é Kassio
@@ -25,8 +25,8 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className="mt-9 w-full max-w-[962px] rounded-[16px] bg-solidPrimary/90 px-16 pb-11 pt-4 md:rounded-[28px]">
-        <h2 className="text-center text-lg md:text-4xl">EXPERIÊNCIAS</h2>
+      <div className="mt-9 w-full max-w-[962px] rounded-2xl bg-solidPrimary/90 p-5 md:rounded-[28px] md:px-16 md:pb-11">
+        <h2 className="text-center text-lg md:text-3xl">EXPERIÊNCIAS</h2>
         <p className="my-5 hidden text-sm md:block">
           Tenho experiência na criação de aplicações web, utilizando React com typesript e vite no
           front end e NestJS no back end.
