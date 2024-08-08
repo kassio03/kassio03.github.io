@@ -16,7 +16,12 @@ import { handleChangeSeasonTheme, SeasonTheme } from '../../theme/handleChangeSe
 import { handleToggleMainTheme } from '../../theme/handleToggleMainTheme';
 import Icon from '../Icon';
 
-const Aside = () => {
+interface AsideProps {
+  asideMustAppear: boolean;
+  toggleAside: () => void;
+}
+
+const Aside = ({ asideMustAppear, toggleAside }: AsideProps) => {
   const [themeIcon, setThemeIcon] = useState('dark');
   const [highlightedSeason, setHighlightedSeason] = useState('');
   const currentDate = useRef(
@@ -37,9 +42,11 @@ const Aside = () => {
   }, []);
 
   return (
-    <div className="sticky top-0 hidden h-screen w-full max-w-[360px] flex-col items-center bg-solidPrimary/90 md:flex">
+    <div
+      className={`fixed top-0 h-screen w-full flex-col items-center bg-solidPrimary/90 md:sticky md:max-w-[360px] ${asideMustAppear ? 'hidden lg:flex' : 'flex'}`}
+    >
       <div className="flex w-full px-3 pt-2">
-        <Icon Svg={Close} className="md:invisible" />
+        <Icon Svg={Close} className="lg:invisible" onClick={toggleAside} />
         <Icon
           Svg={themeIcon === 'dark' ? DarkTheme : LightTheme}
           //Todo: Cor de fundo deste icone não possui outra cor no design original, solução improvisada.
