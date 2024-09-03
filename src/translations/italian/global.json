@@ -1,0 +1,25 @@
+{
+  "title": "Lingue",
+  "paragraph": "La sezione Lingue presenta traduzioni di testi significativi in ​​diverse lingue, divise in tre parti: frasi di Isaac Newton, citazioni e frasi di Nikola Tesla e versetti della Bibbia. Esplora le diverse lingue disponibili e goditi le parole stimolanti, ispirate e riflessive dei loro legittimi autori.",
+  "isaacNewton": {
+    "first": "Lorem ipsum dolor sit amet.",
+    "second": "Nullam tempor ex id orci ultricies.",
+    "third": "Curabitur ac magna nibh. Suspendisse eleifend.",
+    "fourth": "Quisque consectetur gravida augue, nec pulvinar orci scelerisque vel.",
+    "fifth": "Sed elit ligula, vestibulum non sodales nec, congue ac lorem vulputate nunc et risus."
+  },
+  "nikolaTesla": {
+    "first": "De todas as coisas, eu gostava mais de livros.",
+    "second": "Se você quer descobrir os segredos do universo, pense em termos de energia, frequência e vibração.",
+    "third": "Meu cérebro é apenas um receptor, no Universo existe um núcleo do qual obtemos conhecimento, força e inspiração.",
+    "fourth": "Mas alguém pode duvidar hoje que todos os milhões de indivíduos e todos os inumeráveis ​​tipos e personagens constituem uma entidade, uma unidade? ",
+    "fifth": "Vejo um amigo ferido, e isso também me machuca: meu amigo e eu somos um. E agora vejo um inimigo abatido, um aglomerado de matéria que, de todos os aglomerados de matéria do universo, é o que menos me importa, e ainda assim me entristece. Isso não prova que cada um de nós é parte de um todo?"
+  },
+  "bible": {
+    "first": "Lorem ipsum dolor sit amet.",
+    "second": "Nullam tempor ex id orci ultricies.",
+    "third": "Curabitur ac magna nibh. Suspendisse eleifend.",
+    "fourth": "Quisque consectetur gravida augue, nec pulvinar orci scelerisque vel.",
+    "fifth": "Sed elit ligula, vestibulum non sodales nec, congue ac lorem vulputate nunc et risus."
+  }
+}

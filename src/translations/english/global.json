@@ -1,0 +1,25 @@
+{
+  "title": "Languages",
+  "paragraph":  "The Languages ​​section has translations of significant texts in various languages, divided into three parts: phrases by Isaac Newton, quotes and phrases by Nikola Tesla, and verses from the Bible. Explore the different languages ​​available and appreciate the inspiring, inspired and reflective words of their respective authors.",
+  "isaacNewton": {
+    "first": "Lorem ipsum dolor sit amet.",
+    "second": "Nullam tempor ex id orci ultricies.",
+    "third": "Curabitur ac magna nibh. Suspendisse eleifend.",
+    "fourth": "Quisque consectetur gravida augue, nec pulvinar orci scelerisque vel.",
+    "fifth": "Sed elit ligula, vestibulum non sodales nec, congue ac lorem vulputate nunc et risus."
+  },
+  "nikolaTesla": {
+    "first": "Of all things, I liked books the most.",
+    "second": "If you want to find the secrets of the universe, think in terms of energy, frequency and vibration.",
+    "third": "My brain is only a receiver, in the Universe there is a core from which we obtain knowledge, strength and inspiration.",
+    "fourth": "But can anyone doubt to-day that all the millions of individuals and all the innumerable types and characters constitute an entity, a unit?",
+    "fifth": "I see a friend hurt, and it hurts me, too: my friend and I are one. And now I see stricken down an enemy, a lump of matter which, of all the lumps of matter in the universe, I care least for, and it still grieves me. Does this not prove that each of us is only part of a whole?"
+  },
+  "bible": {
+    "first": "Lorem ipsum dolor sit amet.",
+    "second": "Nullam tempor ex id orci ultricies.",
+    "third": "Curabitur ac magna nibh. Suspendisse eleifend.",
+    "fourth": "Quisque consectetur gravida augue, nec pulvinar orci scelerisque vel.",
+    "fifth": "Sed elit ligula, vestibulum non sodales nec, congue ac lorem vulputate nunc et risus."
+  }
+}

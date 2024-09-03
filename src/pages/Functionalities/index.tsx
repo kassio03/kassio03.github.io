@@ -1,9 +1,7 @@
+import LanguageSection from '../../components/LanguageSection';
+
 const Functionalities = () => {
-  return (
-    <div>
-      <h1>Functionalities</h1>
-    </div>
-  );
+  return <LanguageSection></LanguageSection>;
 };
 
 export default Functionalities;
