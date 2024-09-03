@@ -43,7 +43,7 @@ const Aside = ({ asideMustAppear, toggleAside }: AsideProps) => {
 
   return (
     <div
-      className={`fixed top-0 h-screen w-full flex-col items-center bg-solidPrimary/90 md:sticky md:max-w-[360px] ${asideMustAppear ? 'hidden lg:flex' : 'flex'}`}
+      className={`fixed top-0 z-[9999] h-screen w-full flex-col items-center bg-solidPrimary/95 md:sticky md:max-w-[360px] md:bg-solidPrimary/90 ${asideMustAppear ? 'hidden lg:flex' : 'flex'}`}
     >
       <div className="flex w-full px-3 pt-2">
         <Icon Svg={Close} className="lg:invisible" onClick={toggleAside} />
