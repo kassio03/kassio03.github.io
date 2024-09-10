@@ -10,12 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@xpd/tailwind-3dtransforms": "^1.0.3",
     "framer-motion": "^11.4.0",
     "i18next": "^23.14.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^15.0.1",
-    "react-router-dom": "^6.26.0"
+    "react-router-dom": "^6.26.0",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "@svgr/plugin-svgo": "^8.1.0",

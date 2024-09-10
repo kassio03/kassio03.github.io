@@ -14,5 +14,5 @@ module.exports = {
       fontSize: {},
     },
   },
-  plugins: [],
+  plugins: [require('@xpd/tailwind-3dtransforms')],
 };

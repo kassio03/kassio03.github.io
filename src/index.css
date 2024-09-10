@@ -68,4 +68,7 @@
   .bg-winter {
     background: linear-gradient(180deg, #7177DF 0%, #3E4179 100%);
   }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
 }
