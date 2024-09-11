@@ -74,13 +74,15 @@ const AnimationSection = () => {
 
   return (
     <section className="w-full rounded-[28px] bg-solidPrimary/90 p-8 lg:px-12">
-      <header className="flex flex-wrap items-center justify-center min-[425px]:justify-between">
-        <div className="mb-3 flex items-center min-[425px]:mb-0">
+      <header>
+        <div className="min-[425px]:mb-0 mb-3 flex items-center">
           <Icon
             className="h-7 w-7 cursor-default fill-solidTextPrimary stroke-0"
             Svg={AnimationIcon}
           />
-          <h2 className="ml-3 text-4xl">Animações</h2>
+          <h2 id="animation" className="ml-3 text-4xl">
+            Animações
+          </h2>
         </div>
       </header>
       <p className="mt-6 w-fit">
@@ -92,13 +94,13 @@ const AnimationSection = () => {
             {cardsIcons.map(card => (
               <li
                 key={card.icon}
-                className="cursor-pointer text-3xl odd:text-black even:text-red-600"
+                className="w-full cursor-pointer text-3xl odd:text-black even:text-red-600"
                 onClick={() => {
                   setSelectedTab(card);
                   resetAllAnimations();
                 }}
               >
-                <span className={`block px-5 py-2 min-[425px]:px-8`}>{card.icon}</span>
+                <span className={`block px-1 py-2 text-center`}>{card.icon}</span>
                 {card.icon === selectedTab.icon ? (
                   <motion.div className="h-[5px] bg-solidSeason" layoutId="underline" />
                 ) : null}
@@ -107,11 +109,11 @@ const AnimationSection = () => {
           </ul>
         </nav>
         <AnimatePresence mode="wait">
-          <motion.div className="flex w-full max-w-[400px] flex-col items-center justify-center rounded-b-3xl bg-solidTertiary">
+          <motion.div className="flex w-full max-w-[400px] flex-col items-center justify-center rounded-b-3xl bg-solidTertiary px-3">
             {selectedTab.icon === 'K♠️' && (
               <>
                 <motion.div
-                  className="mt-5 h-full w-80"
+                  className="mt-5 w-full max-w-80"
                   initial={{ scaleY: 0, rotateX: 45, rotateY: 90 }}
                   whileInView={{ scaleY: 1, rotateY: 0, rotateX: 0 }}
                   viewport={{ once: true }}
@@ -140,17 +142,20 @@ const AnimationSection = () => {
             {selectedTab.icon === 'K♥️' && (
               <>
                 <motion.div
-                  className={`relative mt-5 h-[480px] w-80 duration-500 ease-out transform-style-3d ${kingOfHeartsAnimationStart ? 'transform rotate-y-180' : 'rotate-y-0'}`}
+                  className={`relative mt-5 w-full max-w-80 duration-500 ease-out transform-style-3d ${kingOfHeartsAnimationStart ? 'transform rotate-y-180' : 'rotate-y-0'}`}
                   initial={{ opacity: 0, scaleY: 0.5, rotateX: 90, rotateY: -90 }}
                   whileInView={{ scaleY: 1, opacity: 1, rotateX: 0, rotateY: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
                 >
-                  <div className="absolute h-full w-full backface-hidden">
+                  <div className="absolute w-full backface-hidden">
                     <KingOfHearts />
                   </div>
-                  <div className="absolute h-full w-full transform rotate-y-180 backface-hidden">
-                    <CardBackface className="h-[480px] w-[320px]" preserveAspectRatio="none" />
+                  <div className="absolute h-full transform rotate-y-180 backface-hidden">
+                    <CardBackface className="h-full w-full" preserveAspectRatio="none" />
+                  </div>
+                  <div className="invisible">
+                    <KingOfHearts />
                   </div>
                 </motion.div>
                 <Button onClick={() => toggleAnimation(setKingOfHeartsAnimationStart)}>
@@ -161,7 +166,7 @@ const AnimationSection = () => {
             {selectedTab.icon === 'K♣️' && (
               <>
                 <motion.div
-                  className="mt-5 h-full w-80"
+                  className="mt-5 w-full max-w-80"
                   initial={{ opacity: 0, scaleX: 0, rotateX: 45, rotateY: 90 }}
                   whileInView={{ scaleX: 1, opacity: 1 }}
                   viewport={{ once: true }}
@@ -190,7 +195,7 @@ const AnimationSection = () => {
             {selectedTab.icon === 'K♦️' && (
               <>
                 <motion.div
-                  className="mt-5 h-full w-80"
+                  className="mt-5 w-full max-w-80"
                   initial={{
                     scaleY: 0,
                     rotateX: 135,

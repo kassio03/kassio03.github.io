@@ -22,17 +22,21 @@ const Home = () => {
         className="fixed z-50 min-h-dvh min-w-full bg-solidSeason"
       />
       <div className="flex w-full flex-col items-center p-5 sm:p-8 lg:p-14">
-        <div className="flex min-h-[315px] w-full max-w-[962px] flex-col items-center overflow-hidden rounded-2xl bg-solidPrimary/90 p-6 min-[1201px]:flex-row min-[1201px]:py-0 min-[1201px]:pl-0">
-          <h1 className="text-lg md:text-3xl min-[1201px]:hidden">RESUMO</h1>
-          <div className="my-5 h-full max-w-[500px] rounded-2xl min-[1201px]:my-0 min-[1201px]:max-w-[315px]">
+        <div className="min-[1201px]:flex-row min-[1201px]:py-0 min-[1201px]:pl-0 flex min-h-[315px] w-full max-w-[962px] flex-col items-center overflow-hidden rounded-2xl bg-solidPrimary/90 p-6">
+          <h1 id="summary" className="min-[1201px]:hidden text-lg md:text-3xl">
+            RESUMO
+          </h1>
+          <div className="min-[1201px]:my-0 min-[1201px]:max-w-[315px] my-5 h-full max-w-[500px] rounded-2xl">
             <img
               src={photo}
               alt="Foto de Kassio Ferreira"
-              className="w-full rounded-2xl object-cover min-[1201px]:min-h-full min-[1201px]:rounded-r-none"
+              className="min-[1201px]:min-h-full min-[1201px]:rounded-r-none w-full rounded-2xl object-cover"
             />
           </div>
           <div className="relative h-full">
-            <h1 className="ml-[90px] mt-4 hidden text-3xl min-[1201px]:block">RESUMO</h1>
+            <h1 id="summary" className="min-[1201px]:block ml-[90px] mt-4 hidden text-3xl">
+              RESUMO
+            </h1>
             <p className="min-[1201px]:mx-14 min-[1201px]:my-6">
               Meu nome é Kassio Ferreira, nasci em maio de 2021. Lorem ipsum dolor sit amet,
               consectetur adipiscing elit. Duis non ex a est vehicula molestie. Pellentesque
@@ -46,7 +50,9 @@ const Home = () => {
           </div>
         </div>
         <div className="mt-9 w-full max-w-[962px] rounded-2xl bg-solidPrimary/90 p-5 md:rounded-[28px] md:px-16 md:pb-11">
-          <h2 className="text-center text-lg md:text-3xl">EXPERIÊNCIAS</h2>
+          <h2 id="experience" className="text-center text-lg md:text-3xl">
+            EXPERIÊNCIAS
+          </h2>
           <p className="my-5 hidden text-sm md:block">
             Tenho experiência na criação de aplicações web, utilizando React com typesript e vite no
             front end e NestJS no back end.

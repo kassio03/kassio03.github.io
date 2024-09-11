@@ -47,10 +47,12 @@ const LanguageSection = () => {
 
   return (
     <section className="w-full rounded-[28px] bg-solidPrimary/90 p-8 lg:px-12">
-      <header className="flex flex-wrap items-center justify-center min-[425px]:justify-between">
-        <div className="mb-3 flex items-center min-[425px]:mb-0">
+      <header className="min-[425px]:justify-between flex flex-wrap items-center justify-center">
+        <div className="min-[425px]:mb-0 mb-3 flex items-center">
           <Icon className="h-7 w-7 cursor-default fill-solidTextPrimary stroke-0" Svg={Language} />
-          <h2 className="ml-3 text-4xl">{t('title')}</h2>
+          <h2 id="language" className="ml-3 text-4xl">
+            {t('title')}
+          </h2>
         </div>
         <motion.nav initial={false} animate={isOpen ? 'open' : 'closed'}>
           <motion.button
@@ -168,7 +170,7 @@ const LanguageSection = () => {
         </div>
       </div>
       <h3 className="mt-12 text-center text-2xl font-semibold italic">Nikola Tesla</h3>
-      <div className="my-4 mt-3 flex flex-col-reverse flex-wrap items-center justify-between gap-3 md:flex-row lg:flex-col-reverse min-[1110px]:flex-row">
+      <div className="min-[1110px]:flex-row my-4 mt-3 flex flex-col-reverse flex-wrap items-center justify-between gap-3 md:flex-row lg:flex-col-reverse">
         <div className="mx-auto flex min-h-[550px] w-full max-w-[280px] flex-col justify-between text-sm font-semibold italic">
           <Quote text={t('nikolaTesla.first')} />
           <Quote text={t('nikolaTesla.second')} />
