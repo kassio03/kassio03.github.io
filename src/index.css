@@ -6,9 +6,28 @@
 @tailwind utilities;
 
 @layer base {
+  h1, h2, h3 {
+    @apply scroll-mt-20
+  }
   body {
     @apply bg-solidSeason
   }
+    /* width */
+  ::-webkit-scrollbar {
+    @apply w-1
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-solidSecondary
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-solidSeason rounded-full
+  }
+
+
   :root {
     --color-solid-primary: 0 0 11; /* #1D1D1D */
     --color-solid-secondary: 0 0 33; /* #545454 */
