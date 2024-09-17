@@ -32,8 +32,8 @@ const allIdsToObserver = {
     { id: 'form', label: 'Formulários' },
     { id: 'database', label: 'Banco de Dados' },
     { id: 'graphics', label: 'Gráficos' },
+    { id: 'tables', label: 'Tabelas' },
     { id: 'other', label: 'Outro' },
-    { id: 'abc', label: 'Outro' },
   ],
 };
 

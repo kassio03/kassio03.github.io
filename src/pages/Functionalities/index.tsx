@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from 'react';
 import Spinner from '../../assets/svg/spinner.svg?react';
 import AnimationSection from '../../components/AnimationSection';
 import LanguageSection from '../../components/LanguageSection';
+import TableSection from '../../components/TableSection';
 
 const Functionalities = () => {
   const [loading, setLoading] = useState(true);
@@ -34,6 +35,7 @@ const Functionalities = () => {
       <div className="mx-auto flex w-full max-w-[1074px] flex-col gap-12 p-5 sm:p-8 lg:p-14">
         <AnimationSection />
         <LanguageSection />
+        <TableSection />
       </div>
     </>
   );
