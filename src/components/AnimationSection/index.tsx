@@ -75,9 +75,9 @@ const AnimationSection = () => {
   return (
     <section className="w-full rounded-[28px] bg-solidPrimary/90 p-8 lg:px-12">
       <header>
-        <div className="min-[425px]:mb-0 mb-3 flex items-center">
+        <div className="mb-3 flex items-center min-[425px]:mb-0">
           <Icon
-            className="h-7 w-7 cursor-default fill-solidTextPrimary stroke-0"
+            className="h-7 w-7 !cursor-default fill-solidTextPrimary stroke-0"
             Svg={AnimationIcon}
           />
           <h2 id="animation" className="ml-3 text-4xl">

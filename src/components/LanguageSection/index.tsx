@@ -49,7 +49,7 @@ const LanguageSection = () => {
     <section className="w-full rounded-[28px] bg-solidPrimary/90 p-8 lg:px-12">
       <header className="flex flex-wrap items-center justify-center min-[425px]:justify-between">
         <div className="mb-3 flex items-center min-[425px]:mb-0">
-          <Icon className="h-7 w-7 cursor-default fill-solidTextPrimary stroke-0" Svg={Language} />
+          <Icon className="h-7 w-7 !cursor-default fill-solidTextPrimary stroke-0" Svg={Language} />
           <h2 id="language" className="ml-3 text-4xl">
             {t('title')}
           </h2>

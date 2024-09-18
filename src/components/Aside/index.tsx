@@ -32,7 +32,7 @@ const allIdsToObserver = {
     { id: 'form', label: 'Formulários' },
     { id: 'database', label: 'Banco de Dados' },
     { id: 'graphics', label: 'Gráficos' },
-    { id: 'tables', label: 'Tabelas' },
+    { id: 'table', label: 'Tabelas' },
     { id: 'other', label: 'Outro' },
   ],
 };
@@ -96,7 +96,7 @@ const Aside = ({ asideMustAppear, toggleAside }: AsideProps) => {
 
   return (
     <div
-      className={`fixed top-0 z-[9999] h-screen w-full flex-col items-center bg-solidPrimary/95 md:bg-solidPrimary/90 lg:sticky lg:max-w-[360px] ${asideMustAppear ? 'hidden lg:flex' : 'flex'}`}
+      className={`fixed top-0 z-[9999] h-screen w-full flex-shrink-0 flex-col items-center bg-solidPrimary/95 md:bg-solidPrimary/90 lg:sticky lg:max-w-[360px] ${asideMustAppear ? 'hidden lg:flex' : 'flex'}`}
     >
       <div className="flex w-full px-3 pt-2">
         <Icon Svg={Close} className="lg:invisible" onClick={toggleAside} />
