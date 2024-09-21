@@ -10,7 +10,7 @@
     @apply scroll-mt-20
   }
   body {
-    @apply bg-solidSeason
+    @apply bg-solidSeason transition duration-1000
   }
     /* width */
   ::-webkit-scrollbar {

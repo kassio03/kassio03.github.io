@@ -13,12 +13,14 @@ import Person from '../../assets/svg/person.svg?react';
 import Spring from '../../assets/svg/spring.svg?react';
 import Summer from '../../assets/svg/summer.svg?react';
 import Winter from '../../assets/svg/winter.svg?react';
+import handleChangeSeasonBackground from '../../theme/handleChangeSeasonBackground';
 import { handleChangeSeasonTheme, SeasonTheme } from '../../theme/handleChangeSeasonTheme';
 import { handleToggleMainTheme } from '../../theme/handleToggleMainTheme';
 import Icon from '../Icon';
 interface AsideProps {
   asideMustAppear: boolean;
   toggleAside: () => void;
+  changeBackgroundTheme: (theme: string) => void;
 }
 
 const allIdsToObserver = {
@@ -37,7 +39,7 @@ const allIdsToObserver = {
   ],
 };
 
-const Aside = ({ asideMustAppear, toggleAside }: AsideProps) => {
+const Aside = ({ asideMustAppear, toggleAside, changeBackgroundTheme }: AsideProps) => {
   const [themeIcon, setThemeIcon] = useState('dark');
   const [highlightedSeason, setHighlightedSeason] = useState('');
   const [currentItemOnScreen, setCurrentItemOnScreen] = useState('');
@@ -54,10 +56,15 @@ const Aside = ({ asideMustAppear, toggleAside }: AsideProps) => {
     handleToggleMainTheme();
     setThemeIcon(previousTheme => (previousTheme === 'dark' ? 'light' : 'dark'));
   }, []);
-  const changeSeasonTheme = useCallback((season: SeasonTheme) => {
-    handleChangeSeasonTheme(season);
-    setHighlightedSeason(season);
-  }, []);
+  const changeSeasonTheme = useCallback(
+    (season: SeasonTheme) => {
+      handleChangeSeasonTheme(season);
+      setHighlightedSeason(season);
+      handleChangeSeasonBackground(season);
+      changeBackgroundTheme(season);
+    },
+    [changeBackgroundTheme],
+  );
 
   const location = useLocation().pathname;
 

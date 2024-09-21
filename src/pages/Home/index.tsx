@@ -21,20 +21,20 @@ const Home = () => {
         }}
         className="fixed z-50 min-h-dvh min-w-full bg-solidSeason"
       />
-      <div className="flex w-full flex-col items-center p-5 sm:p-8 lg:p-14">
-        <div className="min-[1201px]:flex-row min-[1201px]:py-0 min-[1201px]:pl-0 flex min-h-[315px] w-full max-w-[962px] flex-col items-center overflow-hidden rounded-2xl bg-solidPrimary/90 p-6">
-          <h1 id="summary" className="min-[1201px]:hidden text-lg md:text-3xl">
+      <div className="z-10 flex w-full flex-col items-center p-5 sm:p-8 lg:p-14">
+        <div className="flex min-h-[315px] w-full max-w-[962px] flex-col items-center overflow-hidden rounded-2xl bg-solidPrimary/90 p-6 min-[1201px]:flex-row min-[1201px]:py-0 min-[1201px]:pl-0">
+          <h1 id="summary" className="text-lg md:text-3xl min-[1201px]:hidden">
             RESUMO
           </h1>
-          <div className="min-[1201px]:my-0 min-[1201px]:max-w-[315px] my-5 h-full max-w-[500px] rounded-2xl">
+          <div className="my-5 h-full max-w-[500px] rounded-2xl min-[1201px]:my-0 min-[1201px]:max-w-[315px]">
             <img
               src={photo}
               alt="Foto de Kassio Ferreira"
-              className="min-[1201px]:min-h-full min-[1201px]:rounded-r-none w-full rounded-2xl object-cover"
+              className="w-full rounded-2xl object-cover min-[1201px]:min-h-full min-[1201px]:rounded-r-none"
             />
           </div>
           <div className="relative h-full">
-            <h1 id="summary" className="min-[1201px]:block ml-[90px] mt-4 hidden text-3xl">
+            <h1 id="summary" className="ml-[90px] mt-4 hidden text-3xl min-[1201px]:block">
               RESUMO
             </h1>
             <p className="min-[1201px]:mx-14 min-[1201px]:my-6">

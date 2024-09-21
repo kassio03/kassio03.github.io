@@ -5,6 +5,7 @@ import Spinner from '../../assets/svg/spinner.svg?react';
 import AnimationSection from '../../components/AnimationSection';
 import LanguageSection from '../../components/LanguageSection';
 import TableSection from '../../components/TableSection';
+import ThemeSection from '../../components/ThemeSection';
 
 const Functionalities = () => {
   const [loading, setLoading] = useState(true);
@@ -32,7 +33,8 @@ const Functionalities = () => {
       >
         <Spinner />
       </motion.div>
-      <div className="mx-auto flex w-full max-w-[1074px] flex-col gap-12 p-5 sm:p-8 lg:p-14">
+      <div className="z-10 mx-auto flex w-full max-w-[1074px] flex-col gap-12 p-5 sm:p-8 lg:p-14">
+        <ThemeSection />
         <AnimationSection />
         <LanguageSection />
         <TableSection />
