@@ -4,22 +4,9 @@ import { Outlet } from 'react-router-dom';
 import HamburgerMenu from './assets/svg/hamburger-menu.svg?react';
 import Aside from './components/Aside';
 import Icon from './components/Icon';
-import PureCssAutumnBackground from './components/PureCssAutumnBackground';
-import PureCssWinterBackground from './components/PureCssWinterBackground';
-import { useTheme } from './context/ThemeContext';
-
-const seasonsBackground: { [key: string]: JSX.Element } = {
-  winter: <PureCssWinterBackground />,
-  summer: <></>,
-  autumn: <PureCssAutumnBackground />,
-  spring: <></>,
-  default: <></>,
-};
 
 const App = () => {
   const [asideMustAppear, setAsideMustAppear] = useState(true);
-
-  const { currentTheme } = useTheme();
 
   const toggleAside = useCallback(() => {
     setAsideMustAppear(previousState => !previousState);
@@ -36,9 +23,6 @@ const App = () => {
         />
       )}
       <Outlet />
-      <div className="pointer-events-none fixed h-full w-full">
-        {seasonsBackground[currentTheme.seasonTheme]}
-      </div>
     </main>
   );
 };

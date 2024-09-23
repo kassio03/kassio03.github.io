@@ -15,40 +15,40 @@ const PureCssAutumnBackground = () => {
         <i></i>
         <i></i>
         <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
+        <i className="!hidden sm:!inline-block"></i>
+        <i className="!hidden sm:!inline-block"></i>
+        <i className="!hidden sm:!inline-block"></i>
+        <i className="!hidden sm:!inline-block"></i>
+        <i className="!hidden sm:!inline-block"></i>
+        <i className="!hidden sm:!inline-block"></i>
+        <i className="!hidden sm:!inline-block"></i>
+        <i className="!hidden sm:!inline-block"></i>
+        <i className="!hidden sm:!inline-block"></i>
+        <i className="!hidden sm:!inline-block"></i>
+        <i className="!hidden lg:!inline-block"></i>
+        <i className="!hidden lg:!inline-block"></i>
+        <i className="!hidden lg:!inline-block"></i>
+        <i className="!hidden lg:!inline-block"></i>
+        <i className="!hidden lg:!inline-block"></i>
+        <i className="!hidden lg:!inline-block"></i>
+        <i className="!hidden lg:!inline-block"></i>
+        <i className="!hidden lg:!inline-block"></i>
+        <i className="!hidden lg:!inline-block"></i>
+        <i className="!hidden lg:!inline-block"></i>
+        <i className="!hidden lg:!inline-block"></i>
+        <i className="!hidden lg:!inline-block"></i>
+        <i className="!hidden lg:!inline-block"></i>
+        <i className="!hidden lg:!inline-block"></i>
+        <i className="!hidden lg:!inline-block"></i>
+        <i className="!hidden lg:!inline-block"></i>
+        <i className="!hidden lg:!inline-block"></i>
+        <i className="!hidden lg:!inline-block"></i>
+        <i className="!hidden lg:!inline-block"></i>
+        <i className="!hidden lg:!inline-block"></i>
+        <i className="!hidden lg:!inline-block"></i>
+        <i className="!hidden lg:!inline-block"></i>
+        <i className="!hidden lg:!inline-block"></i>
+        <i className="!hidden lg:!inline-block"></i>
       </div>
     </div>
   );

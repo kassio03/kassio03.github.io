@@ -9,23 +9,15 @@ import Select from '../Select';
 const ThemeSection = () => {
   const { setMainTheme, setSeasonTheme } = useTheme();
   return (
-    <section className="relative w-full rounded-[28px] bg-solidPrimary/90 p-8 lg:px-12">
-      <header className="relative z-10 flex flex-wrap items-center justify-center gap-3 text-sm min-[425px]:justify-between">
+    <section className="w-full rounded-[28px] bg-solidPrimary/90 p-8 lg:px-12">
+      <header className="z-10 flex flex-wrap items-center justify-center gap-3 text-sm min-[425px]:justify-between">
         <div className="flex flex-grow-[10] items-center">
           <Icon className="f h-7 w-7 !cursor-default stroke-0" Svg={ThemeIcon} />
-          <h2 className="ml-3 text-4xl">Tematização</h2>
+          <h2 id="themes" className="ml-3 text-4xl">
+            Tematização
+          </h2>
         </div>
         <div className="bg-red flex flex-grow flex-wrap justify-center gap-6">
-          <Select
-            id="mainThemes"
-            width="160px"
-            placeholder="Tema principal"
-            options={['Claro', 'Escuro']}
-            values={[Theme.light, Theme.dark]}
-            handleClick={(value: Theme) => {
-              setMainTheme(value);
-            }}
-          />
           <Select
             id="seasonThemes"
             width="160px"
@@ -41,11 +33,34 @@ const ThemeSection = () => {
               setSeasonTheme(value);
             }}
           />
+          <Select
+            id="mainThemes"
+            width="160px"
+            placeholder="Tema principal"
+            options={['Claro', 'Escuro']}
+            values={[Theme.light, Theme.dark]}
+            handleClick={(value: Theme) => {
+              setMainTheme(value);
+            }}
+          />
         </div>
       </header>
-      <p className="my-6 text-justify">
-        Você também pode alterar o tema rapidamente clicando nos icones no menu a esquerda.
-      </p>
+
+      <div className="my-6">
+        <p>
+          Aqui você pode escolher entre dois tipos de temas: principal e os temas de estações, que
+          funcionam de forma integrada. Por exemplo, você pode selecionar o tema de outono enquanto
+          mantém o tema principal como escuro.
+        </p>
+        <p className="my-3">
+          Se estiver se perguntando sobre o desenho abaixo, experimente trocar o tema de estação.
+        </p>
+        <p>
+          <i>
+            Dica: você pode alterar os temas rapidamente clicando nos ícones no menu à esquerda.
+          </i>
+        </p>
+      </div>
 
       <div className="flex flex-col items-center justify-center">
         <PureCssSeasonsBackground scale={'scale-100'} />

@@ -1,7 +1,7 @@
 
 /* leaf animations */
 
-#autumnBackground {position:relative;top:-50px;width:100%;text-align: right;padding-right: 80px;}
+#autumnBackground {position:relative;top:-60px;width:100%;text-align: right;}
 
 #autumnBackground i {
     display: inline-block;
@@ -44,7 +44,6 @@
   height: 125px;
   width: 10px;
   background: linear-gradient(to right, rgba(0,0,0,.15), rgba(0,0,0,0));
-  display: block;
   transform: rotate(125deg);
   position: absolute;
   left: 85px;
@@ -187,13 +186,13 @@
 
   0% {
       -webkit-transform:
-          translate3d(-350px,0,0)
+          translate3d(-150px,0,0)
           rotate(0deg);
   }
 
   100% {
       -webkit-transform:
-          translate3d(300px,800px,0)
+          translate3d(100px,800px,0)
           rotate(90deg);
       opacity: 0;
   }
@@ -202,7 +201,7 @@
 @keyframes falling2 {
   0% {
      -webkit-transform:
-         translate3d(-400px,0,0)
+         translate3d(-200px,0,0)
          rotate(90deg);
  }
 
@@ -217,7 +216,7 @@
 @keyframes falling3 {
   0% {
      -webkit-transform:
-         translate3d(-230px,0,0)
+         translate3d(-30px,0,0)
          rotate(-20deg);
  }
 

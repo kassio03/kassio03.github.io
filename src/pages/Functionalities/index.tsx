@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState } from 'react';
 
 import Spinner from '../../assets/svg/spinner.svg?react';
 import AnimationSection from '../../components/AnimationSection';
+import GraphicsSection from '../../components/GraphicsSection';
 import LanguageSection from '../../components/LanguageSection';
 import TableSection from '../../components/TableSection';
 import ThemeSection from '../../components/ThemeSection';
@@ -38,6 +39,7 @@ const Functionalities = () => {
         <AnimationSection />
         <LanguageSection />
         <TableSection />
+        <GraphicsSection />
       </div>
     </>
   );

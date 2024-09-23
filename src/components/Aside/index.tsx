@@ -28,13 +28,14 @@ const allIdsToObserver = {
     { id: 'experience', label: 'Experiência' },
   ],
   onFunctionalities: [
+    { id: 'themes', label: 'Tematização' },
     { id: 'animation', label: 'Animações' },
     { id: 'language', label: 'Idiomas' },
-    { id: 'form', label: 'Formulários' },
-    { id: 'database', label: 'Banco de Dados' },
-    { id: 'graphics', label: 'Gráficos' },
     { id: 'table', label: 'Tabelas' },
-    { id: 'other', label: 'Outro' },
+    { id: 'graphics', label: 'Gráficos' },
+    /* { id: 'form', label: 'Formulários' },
+    { id: 'database', label: 'Banco de Dados' },
+    { id: 'other', label: 'Outro' }, */
   ],
 };
 
