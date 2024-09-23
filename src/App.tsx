@@ -6,6 +6,7 @@ import Aside from './components/Aside';
 import Icon from './components/Icon';
 import PureCssAutumnBackground from './components/PureCssAutumnBackground';
 import PureCssWinterBackground from './components/PureCssWinterBackground';
+import { useTheme } from './context/ThemeContext';
 
 const seasonsBackground: { [key: string]: JSX.Element } = {
   winter: <PureCssWinterBackground />,
@@ -17,18 +18,16 @@ const seasonsBackground: { [key: string]: JSX.Element } = {
 
 const App = () => {
   const [asideMustAppear, setAsideMustAppear] = useState(true);
-  const [currentTheme, setCurrentTheme] = useState('default');
+
+  const { currentTheme } = useTheme();
+
   const toggleAside = useCallback(() => {
     setAsideMustAppear(previousState => !previousState);
   }, []);
 
   return (
     <main className="font-inter flex h-full text-solidTextPrimary">
-      <Aside
-        asideMustAppear={asideMustAppear}
-        toggleAside={toggleAside}
-        changeBackgroundTheme={theme => setCurrentTheme(theme)}
-      />
+      <Aside asideMustAppear={asideMustAppear} toggleAside={toggleAside} />
       {asideMustAppear && (
         <Icon
           Svg={HamburgerMenu}
@@ -38,7 +37,7 @@ const App = () => {
       )}
       <Outlet />
       <div className="pointer-events-none fixed h-full w-full">
-        {seasonsBackground[currentTheme]}
+        {seasonsBackground[currentTheme.seasonTheme]}
       </div>
     </main>
   );

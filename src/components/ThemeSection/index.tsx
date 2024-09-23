@@ -1,14 +1,18 @@
-import Theme from '../../assets/svg/theme.svg?react';
+import ThemeIcon from '../../assets/svg/theme.svg?react';
+import { useTheme } from '../../context/ThemeContext';
+import { Theme } from '../../theme/handleChangeMainTheme';
+import { SeasonTheme } from '../../theme/handleChangeSeasonTheme';
 import Icon from '../Icon';
 import PureCssSeasonsBackground from '../PureCssSeasonsBackground';
 import Select from '../Select';
 
 const ThemeSection = () => {
+  const { setMainTheme, setSeasonTheme } = useTheme();
   return (
     <section className="relative w-full rounded-[28px] bg-solidPrimary/90 p-8 lg:px-12">
       <header className="relative z-10 flex flex-wrap items-center justify-center text-sm min-[425px]:justify-between">
         <div className="mb-3 flex items-center min-[425px]:mb-0">
-          <Icon className="h-7 w-7 !cursor-default stroke-0" Svg={Theme} />
+          <Icon className="h-7 w-7 !cursor-default stroke-0" Svg={ThemeIcon} />
           <h2 className="ml-3 text-4xl">Tematização</h2>
         </div>
         <Select
@@ -16,8 +20,9 @@ const ThemeSection = () => {
           width="160px"
           placeholder="Tema principal"
           options={['Claro', 'Escuro']}
-          handleClick={opt => {
-            opt;
+          values={[Theme.light, Theme.dark]}
+          handleClick={(value: Theme) => {
+            setMainTheme(value);
           }}
         />
         <Select
@@ -25,8 +30,9 @@ const ThemeSection = () => {
           width="160px"
           placeholder="Tema de estação"
           options={['Primavera', 'Verão', 'Outono', 'Inverno']}
-          handleClick={option => {
-            option;
+          values={[SeasonTheme.spring, SeasonTheme.summer, SeasonTheme.autumn, SeasonTheme.winter]}
+          handleClick={(value: SeasonTheme) => {
+            setSeasonTheme(value);
           }}
         />
       </header>

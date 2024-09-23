@@ -9,7 +9,8 @@ interface SelectProps {
   Svg?: FunctionComponent<React.SVGProps<SVGSVGElement>>;
   placeholder: string;
   options: string[];
-  handleClick: (option: string) => any;
+  values?: string[];
+  handleClick: (option: any) => any;
   width?: string;
   height?: string;
 }
@@ -23,15 +24,24 @@ const itemVariants: Variants = {
   closed: { opacity: 0, y: 20, transition: { duration: 0.2 } },
 };
 
-const Select = ({ id, Svg, placeholder, options, handleClick, width, height }: SelectProps) => {
+const Select = ({
+  id,
+  Svg,
+  placeholder,
+  options,
+  values = [],
+  handleClick,
+  width,
+  height,
+}: SelectProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentOption, setCurrentOption] = useState(placeholder);
 
   const upd = useCallback(
-    (option: string) => {
+    (value: string, opt: string) => {
       //? Não sei se vou manter o handleclick
-      handleClick(option);
-      setCurrentOption(option);
+      handleClick(value || opt);
+      setCurrentOption(opt);
       setIsOpen(false);
     },
     [handleClick],
@@ -91,7 +101,7 @@ const Select = ({ id, Svg, placeholder, options, handleClick, width, height }: S
                 className="mt-1 flex h-8 cursor-pointer items-center px-3 hover:bg-solidSeason hover:text-white"
                 variants={itemVariants}
                 key={index}
-                onClick={() => upd(opt)}
+                onClick={() => upd(values[index], opt)}
               >
                 <span className="">{opt}</span>
               </motion.li>

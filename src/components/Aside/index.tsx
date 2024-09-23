@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
@@ -13,14 +13,13 @@ import Person from '../../assets/svg/person.svg?react';
 import Spring from '../../assets/svg/spring.svg?react';
 import Summer from '../../assets/svg/summer.svg?react';
 import Winter from '../../assets/svg/winter.svg?react';
-import handleChangeSeasonBackground from '../../theme/handleChangeSeasonBackground';
-import { handleChangeSeasonTheme, SeasonTheme } from '../../theme/handleChangeSeasonTheme';
-import { handleToggleMainTheme } from '../../theme/handleToggleMainTheme';
+import { useTheme } from '../../context/ThemeContext';
+import { Theme } from '../../theme/handleChangeMainTheme';
+import { SeasonTheme } from '../../theme/handleChangeSeasonTheme';
 import Icon from '../Icon';
 interface AsideProps {
   asideMustAppear: boolean;
   toggleAside: () => void;
-  changeBackgroundTheme: (theme: string) => void;
 }
 
 const allIdsToObserver = {
@@ -39,10 +38,10 @@ const allIdsToObserver = {
   ],
 };
 
-const Aside = ({ asideMustAppear, toggleAside, changeBackgroundTheme }: AsideProps) => {
-  const [themeIcon, setThemeIcon] = useState('dark');
-  const [highlightedSeason, setHighlightedSeason] = useState('');
+const Aside = ({ asideMustAppear, toggleAside }: AsideProps) => {
   const [currentItemOnScreen, setCurrentItemOnScreen] = useState('');
+
+  const { currentTheme, setMainTheme, setSeasonTheme } = useTheme();
 
   const currentDate = useRef(
     new Date(Date.now()).toLocaleDateString('pt-BR', {
@@ -50,20 +49,6 @@ const Aside = ({ asideMustAppear, toggleAside, changeBackgroundTheme }: AsidePro
       month: 'long',
       year: 'numeric',
     }),
-  );
-
-  const toggleTheme = useCallback(() => {
-    handleToggleMainTheme();
-    setThemeIcon(previousTheme => (previousTheme === 'dark' ? 'light' : 'dark'));
-  }, []);
-  const changeSeasonTheme = useCallback(
-    (season: SeasonTheme) => {
-      handleChangeSeasonTheme(season);
-      setHighlightedSeason(season);
-      handleChangeSeasonBackground(season);
-      changeBackgroundTheme(season);
-    },
-    [changeBackgroundTheme],
   );
 
   const location = useLocation().pathname;
@@ -108,10 +93,10 @@ const Aside = ({ asideMustAppear, toggleAside, changeBackgroundTheme }: AsidePro
       <div className="flex w-full px-3 pt-2">
         <Icon Svg={Close} className="lg:invisible" onClick={toggleAside} />
         <Icon
-          Svg={themeIcon === 'dark' ? DarkTheme : LightTheme}
+          Svg={currentTheme.mainTheme === 'dark' ? DarkTheme : LightTheme}
           //Todo: Cor de fundo deste icone não possui outra cor no design original, solução improvisada.
-          className={`ml-auto ${themeIcon === 'dark' ? 'bg-slate-200' : 'bg-stone-300'}`}
-          onClick={toggleTheme}
+          className={`ml-auto ${currentTheme.mainTheme === 'dark' ? 'bg-slate-200' : 'bg-stone-300'}`}
+          onClick={() => setMainTheme(currentTheme.mainTheme === 'dark' ? Theme.light : Theme.dark)}
         />
       </div>
       <div className="h-[223px] w-[220px] [@media(max-height:480px)]:hidden">
@@ -120,8 +105,8 @@ const Aside = ({ asideMustAppear, toggleAside, changeBackgroundTheme }: AsidePro
           <Icon
             Svg={Winter}
             className="bg-winter"
-            highlighted={highlightedSeason === SeasonTheme.winter}
-            onClick={() => changeSeasonTheme(SeasonTheme.winter)}
+            highlighted={currentTheme.seasonTheme === SeasonTheme.winter}
+            onClick={() => setSeasonTheme(SeasonTheme.winter)}
           />
           <Lines className="rotate-90 self-end" />
         </div>
@@ -129,18 +114,18 @@ const Aside = ({ asideMustAppear, toggleAside, changeBackgroundTheme }: AsidePro
           <Icon
             Svg={Autumn}
             className="bg-autumn"
-            highlighted={highlightedSeason === SeasonTheme.autumn}
-            onClick={() => changeSeasonTheme(SeasonTheme.autumn)}
+            highlighted={currentTheme.seasonTheme === SeasonTheme.autumn}
+            onClick={() => setSeasonTheme(SeasonTheme.autumn)}
           />
           <Logo
             className="fill-solidTextPrimary"
-            onClick={() => changeSeasonTheme(SeasonTheme.default)}
+            onClick={() => setSeasonTheme(SeasonTheme.default)}
           />
           <Icon
             Svg={Spring}
             className="bg-spring"
-            highlighted={highlightedSeason === SeasonTheme.spring}
-            onClick={() => changeSeasonTheme(SeasonTheme.spring)}
+            highlighted={currentTheme.seasonTheme === SeasonTheme.spring}
+            onClick={() => setSeasonTheme(SeasonTheme.spring)}
           />
         </div>
         <div className="mx-auto flex h-[74px] w-[180px] justify-between">
@@ -148,8 +133,8 @@ const Aside = ({ asideMustAppear, toggleAside, changeBackgroundTheme }: AsidePro
           <Icon
             Svg={Summer}
             className="bg-summer self-end"
-            highlighted={highlightedSeason === SeasonTheme.summer}
-            onClick={() => changeSeasonTheme(SeasonTheme.summer)}
+            highlighted={currentTheme.seasonTheme === SeasonTheme.summer}
+            onClick={() => setSeasonTheme(SeasonTheme.summer)}
           />
           <Lines className="rotate-180" />
         </div>

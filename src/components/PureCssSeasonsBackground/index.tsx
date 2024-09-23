@@ -1,8 +1,11 @@
 import './styles.css';
 
+import Rain from '../../assets/gif/rain.webp';
+import Snow from '../../assets/gif/snow.webp';
 interface PureCssSeasonsBackgroundProps {
   scale: string;
 }
+
 const PureCssSeasonsBackground = ({ scale }: PureCssSeasonsBackgroundProps) => {
   return (
     <>
@@ -12,7 +15,7 @@ const PureCssSeasonsBackground = ({ scale }: PureCssSeasonsBackgroundProps) => {
       >
         <div className="season"></div>
         <div className="sunnyDay left-[50px] scale-50 min-[425px]:left-[150px] min-[425px]:scale-100"></div>
-        <div className="rainbow -left-[130px] bottom-[0px] scale-50 min-[425px]:bottom-[32px] min-[425px]:left-[40px] min-[425px]:scale-100">
+        <div className="rainbow -bottom-12 -left-[130px] scale-50 min-[425px]:bottom-[32px] min-[425px]:left-[40px] min-[425px]:scale-100">
           <div className="rainbow-colour"></div>
           <div className="rainbow-colour"></div>
           <div className="rainbow-colour"></div>
@@ -21,437 +24,69 @@ const PureCssSeasonsBackground = ({ scale }: PureCssSeasonsBackgroundProps) => {
           <div className="rainbow-colour"></div>
           <div className="rainbow-colour"></div>
         </div>
-        <div className="cloud-group -left-[170px] -top-[60px] scale-50 min-[425px]:-top-[30px] min-[425px]:left-[0px] min-[425px]:scale-100">
+        <div className="cloud-group -left-[170px] -top-[120px] h-[200%] scale-50 min-[425px]:-top-[30px] min-[425px]:left-[0px] min-[425px]:h-[100%] min-[425px]:scale-100">
           <div className="cloud">
-            <div className="weather-container">
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
+            <div className="weather-container overflow-hidden">
+              <div className="snowing hidden h-full w-[400%]">
+                <img className={`-z-10 mt-[20px] opacity-70`} src={Snow} alt="chuva" />
+              </div>
+              <img className={`rainy -z-10 hidden h-full`} src={Rain} alt="chuva" />
             </div>
           </div>
           <div className="cloud">
-            <div className="weather-container">
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
+            <div className="weather-container overflow-hidden">
+              <div className="snowing hidden h-full w-[400%]">
+                <img className={`-z-10 mt-[20px] opacity-70`} src={Snow} alt="chuva" />
+              </div>
+              <img className={`rainy -z-10 hidden h-full`} src={Rain} alt="chuva" />
             </div>
           </div>
           <div className="cloud">
-            <div className="weather-container">
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
+            <div className="weather-container overflow-hidden">
+              <div className="snowing hidden h-full w-[400%]">
+                <img className={`-z-10 mt-[20px] opacity-70`} src={Snow} alt="chuva" />
+              </div>
+              <img className={`rainy -z-10 hidden h-full`} src={Rain} alt="chuva" />
             </div>
           </div>
           <div className="cloud">
-            <div className="weather-container">
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
+            <div className="weather-container overflow-hidden">
+              <div className="snowing hidden h-full w-[400%]">
+                <img className={`-z-10 mt-[20px] opacity-70`} src={Snow} alt="chuva" />
+              </div>
+              <img className={`rainy -z-10 hidden h-full`} src={Rain} alt="chuva" />
             </div>
           </div>
           <div className="cloud">
-            <div className="weather-container">
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
+            <div className="weather-container overflow-hidden">
+              <div className="snowing hidden h-full w-[400%]">
+                <img className={`-z-10 mt-[20px] opacity-70`} src={Snow} alt="chuva" />
+              </div>
+              <img className={`rainy -z-10 hidden h-full`} src={Rain} alt="chuva" />
             </div>
           </div>
           <div className="cloud">
-            <div className="weather-container">
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
+            <div className="weather-container overflow-hidden">
+              <div className="snowing hidden h-full w-[400%]">
+                <img className={`-z-10 mt-[20px] opacity-70`} src={Snow} alt="chuva" />
+              </div>
+              <img className={`rainy -z-10 hidden h-full`} src={Rain} alt="chuva" />
             </div>
           </div>
           <div className="cloud">
-            <div className="weather-container">
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
+            <div className="weather-container overflow-hidden">
+              <div className="snowing hidden h-full w-[400%]">
+                <img className={`-z-10 mt-[20px] opacity-70`} src={Snow} alt="chuva" />
+              </div>
+              <img className={`rainy -z-10 hidden h-full`} src={Rain} alt="chuva" />
             </div>
           </div>
           <div className="cloud">
-            <div className="weather-container">
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="snow"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
-              <div className="rain"></div>
+            <div className="weather-container overflow-hidden">
+              <div className="snowing hidden h-full w-[400%]">
+                <img className={`-z-10 mt-[20px] opacity-70`} src={Snow} alt="chuva" />
+              </div>
+              <img className={`rainy -z-10 hidden h-full`} src={Rain} alt="chuva" />
             </div>
           </div>
         </div>

@@ -3,7 +3,7 @@ const mediumColours = ['#66bbd8', '#92c938', '#acc52b', '#ff9d25', 'transparent'
 const darkColours = ['#4da2bb', '#2a9d5c', '#89a503', '#ff6b2f', 'transparent'];
 const backgroundColours = ['#cbe9f4', '#daf8ff', '#feec98', '#ffdc8a'];
 const bushColours = ['#ffffff', '#3ebf6d', '#99b31a', '#fd6d2e', '#93ccb8'];
-const cloudColours = ['#ffffff', '#ffffff', '#ffffff', '#eaf9fe', '#ffffff'];
+const cloudColours = ['#ffffff', '#ffffff', '#ffffff', '#CFD8DC', '#ffffff'];
 const seasons = ['winter', 'spring', 'summer', 'autumn', 'default'];
 
 const handleChangeSeasonBackground = (season: string = 'default') => {
@@ -12,8 +12,8 @@ const handleChangeSeasonBackground = (season: string = 'default') => {
   const background = document.getElementById('seasonsBg');
   const rainbow = document.querySelector('.rainbow');
   const rabbit = document.querySelector('.rabbit');
-  const snow = document.querySelectorAll('.snow');
-  const rain = document.querySelectorAll('.rain');
+  const snow = document.querySelectorAll('.snowing');
+  const rain = document.querySelectorAll('.rainy');
   const flowers = document.querySelectorAll('.flower');
 
   const index = seasons.indexOf(season);
