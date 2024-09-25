@@ -49,7 +49,7 @@ const Select = ({
 
   return (
     <>
-      <motion.nav initial={false} animate={isOpen ? 'open' : 'closed'}>
+      <motion.div initial={false} animate={isOpen ? 'open' : 'closed'}>
         <motion.button
           id={id}
           style={{ width, height }}
@@ -108,7 +108,7 @@ const Select = ({
             );
           })}
         </motion.ul>
-      </motion.nav>
+      </motion.div>
     </>
   );
 };

@@ -1,13 +1,17 @@
-interface CardProps {
+interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
   paragraph: string;
 }
 
-const Card = ({ title, paragraph }: CardProps) => {
+const Card = ({ title, paragraph, className }: CardProps) => {
   return (
-    <div className="m-2 max-w-[300px] overflow-hidden rounded-[16px]">
-      <h1 className="flex h-[34px] items-center justify-center bg-solidSeason">{title}</h1>
-      <p className="min-h-[95px] bg-solidSecondary px-6 py-3">{paragraph}</p>
+    <div className={`h-full overflow-hidden rounded-[16px] ${className}`}>
+      <h2 className="flex h-[34px] items-center justify-center bg-solidSeason text-sm text-white min-[425px]:text-base">
+        {title}
+      </h2>
+      <p className="h-full min-h-[95px] bg-solidSecondary px-4 py-2 text-justify text-xs min-[425px]:px-6 min-[425px]:py-3 min-[425px]:text-sm">
+        {paragraph}
+      </p>
     </div>
   );
 };
