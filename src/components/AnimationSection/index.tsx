@@ -85,9 +85,16 @@ const AnimationSection = () => {
           </h2>
         </div>
       </header>
-      <p className="mt-6 w-fit">
-        Sed elit ligula, vestibulum non sodales nec, congue ac lorem vulputate nunc et risus.
-      </p>
+      <div className="mt-6">
+        <p>
+          Cada uma das quatro cartas abaixo, representando os reis dos diferentes naipes do baralho,
+          traz duas animações únicas: uma ao ser revelada e outra executava ao clicar no botão logo
+          abaixo da carta.
+        </p>
+        <p className="mt-3">
+          <i>Dica: Experimente mudar o tema de estação no menu a esquerda.</i>
+        </p>
+      </div>
       <div className="mt-8 flex flex-col items-center justify-center">
         <nav className="mx-auto w-full max-w-[400px] overflow-hidden rounded-t-3xl bg-solidSecondary">
           <ul className="flex w-full justify-between">

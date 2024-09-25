@@ -14,7 +14,7 @@ const ThemeSection = () => {
         <div className="flex flex-grow-[10] items-center">
           <Icon className="f h-7 w-7 !cursor-default stroke-0" Svg={ThemeIcon} />
           <h2 id="themes" className="ml-3 text-4xl">
-            Tematização
+            Temas
           </h2>
         </div>
         <div className="bg-red flex flex-grow flex-wrap justify-center gap-6">
@@ -57,7 +57,7 @@ const ThemeSection = () => {
         </p>
         <p>
           <i>
-            Dica: você pode alterar os temas rapidamente clicando nos ícones no menu à esquerda.
+            Dica: você pode alterar os temas rapidamente clicando nos ícones no menu a esquerda.
           </i>
         </p>
       </div>

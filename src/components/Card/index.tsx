@@ -9,7 +9,7 @@ const Card = ({ title, paragraph, className }: CardProps) => {
       <h2 className="flex h-[34px] items-center justify-center bg-solidSeason text-sm text-white min-[425px]:text-base">
         {title}
       </h2>
-      <p className="h-full min-h-[95px] bg-solidSecondary px-4 py-2 text-justify text-xs min-[425px]:px-6 min-[425px]:py-3 min-[425px]:text-sm">
+      <p className="h-full min-h-[95px] bg-solidSecondary px-4 py-2 text-center text-xs min-[425px]:px-6 min-[425px]:py-3 min-[425px]:text-sm">
         {paragraph}
       </p>
     </div>

@@ -28,7 +28,7 @@ const allIdsToObserver = {
     { id: 'experience', label: 'Experiência' },
   ],
   onFunctionalities: [
-    { id: 'themes', label: 'Tematização' },
+    { id: 'themes', label: 'Temas' },
     { id: 'animation', label: 'Animações' },
     { id: 'language', label: 'Idiomas' },
     { id: 'table', label: 'Tabelas' },
