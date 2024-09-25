@@ -2,11 +2,11 @@
   "title": "Idiomas",
   "paragraph":  "A seção Idiomas possui traduções de textos significativos em várias línguas, divididos em três partes: frases de Isaac Newton, citações e frases de Nikola Tesla e versículos da Bíblia. Explore os diferentes idiomas disponíveis e aprecie as palavras inspiradoras, inspiradas e reflexivas de seus devidos autores.",
   "isaacNewton": {
-    "first": "Lorem ipsum dolor sit amet.",
-    "second": "Nullam tempor ex id orci ultricies.",
-    "third": "Curabitur ac magna nibh. Suspendisse eleifend.",
-    "fourth": "Quisque consectetur gravida augue, nec pulvinar orci scelerisque vel.",
-    "fifth": "Sed elit ligula, vestibulum non sodales nec, congue ac lorem vulputate nunc et risus."
+    "first": "Construímos muros demais e pontes de menos.",
+    "second": "O que sabemos é uma gota; o que ignoramos é um oceano.",
+    "third": "Se eu vi mais longe, foi por estar sobre ombros de gigantes.",
+    "fourth": "A gravidade explica os movimentos dos planetas, mas não pode explicar quem colocou os planetas em movimento.",
+    "fifth": "A maravilhosa disposição e harmonia do universo só pode ter tido origem segundo o plano de um Ser que tudo sabe e tudo pode. Este é e continua sendo meu maior entendimento."
   },
   "nikolaTesla": {
     "first": "De todas as coisas, eu gostava mais de livros.",
@@ -16,10 +16,10 @@
     "fifth": "Vejo um amigo ferido, e isso também me machuca: meu amigo e eu somos um. E agora vejo um inimigo abatido, um aglomerado de matéria que, de todos os aglomerados de matéria do universo, é o que menos me importa, e ainda assim me entristece. Isso não prova que cada um de nós é parte de um todo? "
   },
   "bible": {
-    "first": "Lorem ipsum dolor sit amet.",
-    "second": "Nullam tempor ex id orci ultricies.",
-    "third": "Curabitur ac magna nibh. Suspendisse eleifend.",
-    "fourth": "Quisque consectetur gravida augue, nec pulvinar orci scelerisque vel.",
-    "fifth": "Sed elit ligula, vestibulum non sodales nec, congue ac lorem vulputate nunc et risus."
+    "first": "[1 Pedro 5:7] - Lancem sobre ele toda a sua ansiedade, porque ele tem cuidado de vocês.",
+    "second": "[Gálatas 5:22-23] - Mas o fruto do Espírito é amor, alegria, paz, paciência, amabilidade, bondade, fidelidade, mansidão e autocontrole.",
+    "third": "[Romanos 10:9] - Se você confessar com a sua boca que Jesus é o Senhor e crer em seu coração que Deus o ressuscitou dos mortos, será salvo.",
+    "fourth": "[Mateus 7:13] - Entrem pela porta estreita, porque larga é a porta e amplo o caminho que leva à perdição, e muitos são os que entram por ela.",
+    "fifth": "[Filipenses 4:6] - Não andem ansiosos por coisa alguma, mas em tudo, pela oração e súplicas, e com ação de graças, apresentem seus pedidos a Deus."
   }
 }

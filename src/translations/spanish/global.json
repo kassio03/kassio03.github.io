@@ -2,24 +2,24 @@
   "title": "Idiomas",
   "paragraph": "La sección de Idiomas cuenta con traducciones de textos significativos en varios idiomas, divididas en tres partes: frases de Isaac Newton, citas y frases de Nikola Tesla y versículos de la Biblia. Explora los diferentes idiomas disponibles y disfruta de las palabras inspiradoras, inspiradoras y reflexivas de sus legítimos autores.",
   "isaacNewton": {
-    "first": "Lorem ipsum dolor sit amet.",
-    "second": "Nullam tempor ex id orci ultricies.",
-    "third": "Curabitur ac magna nibh. Suspendisse eleifend.",
-    "fourth": "Quisque consectetur gravida augue, nec pulvinar orci scelerisque vel.",
-    "fifth": "Sed elit ligula, vestibulum non sodales nec, congue ac lorem vulputate nunc et risus."
+    "first": "Construimos demasiados muros y muy pocos puentes.",
+    "second": "Lo que conocemos es una gota; lo que ignoramos es un océano.",
+    "third": "Si vi más lejos fue porque estaba sobre hombros de gigantes.",
+    "fourth": "La gravedad explica los movimientos de los planetas, pero no puede explicar quién los puso en movimiento.",
+    "fifth": "La maravillosa disposición y armonía del universo sólo puede haberse originado según el plan de un Ser que todo lo sabe y todo lo puede. Este es y sigue siendo mi mayor entendimiento."
   },
   "nikolaTesla": {
-    "first": "De todas as coisas, eu gostava mais de livros.",
-    "second": "Se você quer descobrir os segredos do universo, pense em termos de energia, frequência e vibração.",
-    "third": "Meu cérebro é apenas um receptor, no Universo existe um núcleo do qual obtemos conhecimento, força e inspiração.",
-    "fourth": "Mas alguém pode duvidar hoje que todos os milhões de indivíduos e todos os inumeráveis ​​tipos e personagens constituem uma entidade, uma unidade? ",
-    "fifth": "Vejo um amigo ferido, e isso também me machuca: meu amigo e eu somos um. E agora vejo um inimigo abatido, um aglomerado de matéria que, de todos os aglomerados de matéria do universo, é o que menos me importa, e ainda assim me entristece. Isso não prova que cada um de nós é parte de um todo?"
+    "first": "De todas las cosas, lo que más me gustaban eran los libros.",
+    "second": "Si quieres descubrir los secretos del universo, piensa en términos de energía, frecuencia y vibración.",
+    "third": "Mi cerebro es sólo un receptor, en el Universo hay un núcleo del cual obtenemos conocimiento, fuerza e inspiración.",
+    "fourth": "Pero ¿puede alguien dudar hoy de que todos los millones de individuos y todos los innumerables tipos y caracteres constituyen una entidad, una unidad? ",
+    "fifth": "Veo a un amigo herido y me duele a mí también: mi amigo y yo somos uno. Y ahora veo un enemigo caído, un cúmulo de materia que, de todos los cúmulos de materia del universo, es el que menos me importa, y sin embargo me entristece. ¿No prueba esto que cada uno de nosotros es parte de un todo? "
   },
   "bible": {
-    "first": "Lorem ipsum dolor sit amet.",
-    "second": "Nullam tempor ex id orci ultricies.",
-    "third": "Curabitur ac magna nibh. Suspendisse eleifend.",
-    "fourth": "Quisque consectetur gravida augue, nec pulvinar orci scelerisque vel.",
-    "fifth": "Sed elit ligula, vestibulum non sodales nec, congue ac lorem vulputate nunc et risus."
+    "first": "[1 Pedro 5:7] - Echad toda vuestra ansiedad sobre él, porque él se preocupa por vosotros.",
+    "second": "[Gálatas 5:22-23] - Pero el fruto del Espíritu es amor, gozo, paz, paciencia, bondad, bondad, fidelidad, mansedumbre y dominio propio.",
+    "third": "[Romanos 10:9] - Si confiesas con tu boca que Jesús es el Señor y crees en tu corazón que Dios lo resucitó de entre los muertos, serás salvo.",
+    "fourth": "[Mateo 7:13] - Entrad por la puerta estrecha, porque ancha es la puerta y ancho el camino que lleva a la perdición, y son muchos los que entran por ella.",
+    "fifth": "[Filipenses 4:6] - No estéis afanosos por nada, sino que en todo, con oración y súplica, con acción de gracias, presentad vuestras peticiones a Dios."
   }
 }

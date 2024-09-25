@@ -30,5 +30,8 @@ i18n.init({
   },
   lng: 'portuguese',
   fallbackLng: 'english',
+  interpolation: {
+    escapeValue: false,
+  },
 });
 export default i18n;

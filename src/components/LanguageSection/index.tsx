@@ -78,7 +78,7 @@ const LanguageSection = () => {
             </motion.div>
           </motion.button>
           <motion.ul
-            className="absolute w-[140px] bg-solidSecondary py-2"
+            className="absolute w-40 bg-solidSecondary py-2"
             variants={{
               open: {
                 clipPath: 'inset(0% 0% 0% 0% round 10px)',
@@ -102,7 +102,7 @@ const LanguageSection = () => {
             style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
           >
             <motion.li
-              className="mx-3 h-5 rounded-[15px] border-2 border-solid border-sky-500/80 text-center text-[0.65rem] text-sky-500/80"
+              className="mx-3 flex h-6 items-center justify-center rounded-[15px] border-2 border-solid border-sky-300/80 bg-black/50 text-center text-[0.7rem] text-sky-300/80"
               variants={itemVariants}
             >
               Verificado
@@ -126,7 +126,7 @@ const LanguageSection = () => {
             })}
             <hr className="mx-3 mt-3 border-solidTertiary" />
             <motion.li
-              className="mx-3 mt-2 h-5 rounded-[15px] border-2 border-solid border-orange-300/80 text-center text-[0.65rem] text-orange-300/80"
+              className="mx-3 mt-2 flex h-6 items-center justify-center rounded-[15px] border-2 border-solid border-orange-300/80 bg-black/50 text-center text-[0.7rem] text-orange-300/80"
               variants={itemVariants}
             >
               Tradução Automática
@@ -196,11 +196,11 @@ const LanguageSection = () => {
           />
         </div>
         <div className="mx-auto flex min-h-[550px] w-full max-w-[280px] flex-col justify-between text-sm font-semibold italic">
-          <Quote text={t('isaacNewton.first')} />
-          <Quote text={t('isaacNewton.second')} />
-          <Quote text={t('isaacNewton.third')} />
-          <Quote text={t('isaacNewton.fourth')} />
-          <Quote text={t('isaacNewton.fifth')} />
+          <Quote text={t('bible.first')} />
+          <Quote text={t('bible.second')} />
+          <Quote text={t('bible.third')} />
+          <Quote text={t('bible.fourth')} />
+          <Quote text={t('bible.fifth')} />
         </div>
       </div>
     </section>
