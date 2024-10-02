@@ -11,7 +11,7 @@ import Icon from '../Icon';
 
 const hiddenMask = `radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 0%)`;
 const visibleMask = `radial-gradient(circle, rgba(0,0,0,1) 100%, rgba(0,0,0,0) 100%)`;
-const cardsIcons = [{ icon: 'K♠️' }, { icon: 'K♥️' }, { icon: 'K♣️' }, { icon: 'K♦️' }];
+const cardsIcons = [{ icon: 'K♥️' }, { icon: 'K♣️' }, { icon: 'K♦️' }, { icon: 'K♠️' }];
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {}
 
@@ -101,7 +101,7 @@ const AnimationSection = () => {
             {cardsIcons.map(card => (
               <li
                 key={card.icon}
-                className="w-full cursor-pointer text-3xl odd:text-black even:text-red-600"
+                className="w-full cursor-pointer text-3xl odd:text-red-600 even:text-black"
                 onClick={() => {
                   setSelectedTab(card);
                   resetAllAnimations();

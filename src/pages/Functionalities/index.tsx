@@ -14,6 +14,7 @@ const Functionalities = () => {
     setLoading(false);
   }, []);
   useEffect(() => {
+    window.scrollTo(0, 0);
     setTimeout(changeLoading, 500);
   }, [changeLoading]);
   return (
