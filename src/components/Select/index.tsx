@@ -1,5 +1,5 @@
 import { motion, Variants } from 'framer-motion';
-import React, { FunctionComponent, useCallback, useState } from 'react';
+import React, { FunctionComponent, useCallback, useEffect, useRef, useState } from 'react';
 
 import ArrowDown from '../../assets/svg/arrow-down.svg?react';
 import Icon from '../Icon';
@@ -10,6 +10,7 @@ interface SelectProps {
   placeholder: string;
   options: string[];
   values?: string[];
+  mainValue?: string;
   handleClick: (option: any) => any;
   width?: string;
   height?: string;
@@ -30,13 +31,14 @@ const Select = ({
   placeholder,
   options,
   values = [],
+  mainValue,
   handleClick,
   width,
   height,
 }: SelectProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentOption, setCurrentOption] = useState(placeholder);
-
+  const selectRef = useRef<HTMLDivElement>(null); // useRef to reference the select
   const upd = useCallback(
     (value: string, opt: string) => {
       //? Não sei se vou manter o handleclick
@@ -46,18 +48,27 @@ const Select = ({
     },
     [handleClick],
   );
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (selectRef.current && !selectRef.current.contains(event.target as Node)) setIsOpen(false);
+    };
 
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
   return (
     <>
-      <motion.div initial={false} animate={isOpen ? 'open' : 'closed'}>
+      <motion.div ref={selectRef} initial={false} animate={isOpen ? 'open' : 'closed'}>
         <motion.button
           id={id}
           style={{ width, height }}
-          className={`flex h-10 items-center rounded-[10px] ${currentOption === placeholder ? 'bg-solidSecondary' : 'bg-solidSeason text-white'}`}
+          className={`flex h-10 items-center rounded-[10px] ${currentOption === placeholder && !mainValue ? 'bg-solidSecondary' : 'bg-solidSeason text-white'}`}
           whileTap={{ scale: 0.9 }}
           onClick={() => setIsOpen(!isOpen)}
         >
-          <span className="ml-3 text-sm">{currentOption}</span>
+          <span className="ml-3 text-sm">{mainValue || currentOption}</span>
           <motion.div
             className="ml-auto"
             variants={{

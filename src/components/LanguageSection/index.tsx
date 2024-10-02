@@ -1,5 +1,5 @@
 import { motion, Variants } from 'framer-motion';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import bible from '../../assets/img/bible.jpg';
@@ -43,8 +43,19 @@ const handleChangeLanguage = (newLanguage: string) => {
 const LanguageSection = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState(languages[0]);
+  const selectRef = useRef<HTMLDivElement>(null);
   const [t] = useTranslation('global');
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (selectRef.current && !selectRef.current.contains(event.target as Node)) setIsOpen(false);
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
   return (
     <section className="w-full rounded-[28px] bg-solidPrimary/90 p-8 lg:px-12">
       <header className="flex flex-wrap items-center justify-center min-[425px]:justify-between">
@@ -54,11 +65,11 @@ const LanguageSection = () => {
             {t('title')}
           </h2>
         </div>
-        <motion.nav initial={false} animate={isOpen ? 'open' : 'closed'}>
+        <motion.div ref={selectRef} initial={false} animate={isOpen ? 'open' : 'closed'}>
           <motion.button
-            className="flex w-40 items-center rounded-[20px] bg-solidSecondary"
+            className="flex w-40 items-center rounded-[10px] bg-solidSecondary"
             whileTap={{ scale: 0.97 }}
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => setIsOpen(pv => !pv)}
           >
             <Icon
               className="mx-3 h-[18px] w-[25px] overflow-hidden rounded-[2px]"
@@ -149,7 +160,7 @@ const LanguageSection = () => {
               );
             })}
           </motion.ul>
-        </motion.nav>
+        </motion.div>
       </header>
       <p className="mt-6 w-fit">{t('paragraph')}</p>
       <h3 className="mt-10 text-center text-2xl font-semibold italic">Isaac Newton</h3>
