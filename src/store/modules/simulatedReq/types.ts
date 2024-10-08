@@ -2,6 +2,7 @@ export enum ActionTypes {
   LOAD_REQUEST = '@API/LOAD_REQUEST',
   LOAD_SUCCESS = '@API/LOAD_SUCCESS',
   LOAD_FAILURE = '@API/LOAD_FAILURE',
+  FAKE_LOADING = '@API/FAKE_LOADING',
 }
 
 export interface SaleRecord {

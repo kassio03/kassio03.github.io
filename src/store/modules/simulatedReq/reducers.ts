@@ -27,6 +27,12 @@ const reducer = (state = INITIAL_STATE, action: any): ReqState => {
         loading: false,
         error: true,
       };
+    case ActionTypes.FAKE_LOADING:
+      return {
+        ...state,
+        loading: action.payload,
+        error: false,
+      };
     default:
       return {
         ...state,

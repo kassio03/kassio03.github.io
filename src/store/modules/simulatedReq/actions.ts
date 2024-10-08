@@ -13,3 +13,7 @@ export const loadSuccess = (data: SaleRecord[]) => {
 export const loadFailure = () => {
   return action(ActionTypes.LOAD_SUCCESS);
 };
+
+export const setLoading = (loading: boolean) => {
+  return action(ActionTypes.FAKE_LOADING, loading);
+};
