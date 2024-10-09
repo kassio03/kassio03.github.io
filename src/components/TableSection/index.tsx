@@ -427,7 +427,6 @@ const TableSection = () => {
                               a['customer-type'].localeCompare(b['customer-type']),
                             ),
                       );
-                      resetOrdersExceptOne('customer-type');
                     }}
                   >
                     <div className="-ml-4 flex items-center pr-12">
@@ -447,7 +446,6 @@ const TableSection = () => {
                               a['product-line'].localeCompare(b['product-line']),
                             ),
                       );
-                      resetOrdersExceptOne('product-line');
                     }}
                   >
                     <div className="-ml-4 flex items-center pr-12">
