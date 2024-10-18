@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
+      VITE_TRACKING_ID: ${{ secrets.VITE_TRACKING_ID }}
     steps:
       - name: Clone repository
         uses: actions/checkout@v4
