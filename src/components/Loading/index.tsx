@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
-import Spinner from '../../assets/svg/spinner.svg?react';
+import Spinner from '../../assets/gif/spinner.gif';
 const Loading = () => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -25,7 +25,7 @@ const Loading = () => {
         },
       }}
     >
-      <Spinner />
+      <img src={Spinner} alt="" />
     </motion.div>
   );
 };

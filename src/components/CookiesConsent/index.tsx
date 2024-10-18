@@ -21,10 +21,12 @@ const CookieConsent = () => {
 
   const declineCookies = () => {
     const currentDate = new Date(Date.now());
-    const expiresInOneDay = new Date(currentDate.getTime() + 86400000);
+    const expiresInOneDay = new Date(currentDate.getTime() + 86400000 / 2);
     setCookie('analytics', false, {
       expires: expiresInOneDay,
     });
+
+    setCookiesAlreadySetted(true);
   };
 
   const location = useLocation();
