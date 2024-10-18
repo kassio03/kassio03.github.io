@@ -10,6 +10,7 @@ import ActiveVisibility from './assets/svg/active-visibility.svg?react';
 import CheckboxIcon from './assets/svg/checkbox.svg?react';
 import HamburgerMenu from './assets/svg/hamburger-menu.svg?react';
 import Aside from './components/Aside';
+import CookieConsent from './components/CookiesConsent';
 import Icon from './components/Icon';
 import { useTheme } from './context/ThemeContext';
 import { SeasonTheme } from './theme/handleChangeSeasonTheme';
@@ -25,6 +26,7 @@ const App = () => {
   }, []);
   return (
     <main className={`font-inter flex h-full text-solidTextPrimary`}>
+      <CookieConsent />
       <Aside asideMustAppear={asideMustAppear} toggleAside={toggleAside} />
       {asideMustAppear && (
         <Icon

@@ -1,6 +1,7 @@
 import './index.css';
 
 import React from 'react';
+import { CookiesProvider } from 'react-cookie';
 import ReactDOM from 'react-dom/client';
 import { I18nextProvider } from 'react-i18next';
 import { Provider } from 'react-redux';
@@ -16,11 +17,13 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate persistor={persistor}>
-        <ThemeContextProvider>
-          <I18nextProvider i18n={i18nConfig}>
-            <RouterProvider router={routesConfig} />
-          </I18nextProvider>
-        </ThemeContextProvider>
+        <CookiesProvider defaultSetOptions={{ path: '/' }}>
+          <ThemeContextProvider>
+            <I18nextProvider i18n={i18nConfig}>
+              <RouterProvider router={routesConfig} />
+            </I18nextProvider>
+          </ThemeContextProvider>
+        </CookiesProvider>
       </PersistGate>
     </Provider>
   </React.StrictMode>,

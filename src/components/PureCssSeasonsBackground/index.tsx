@@ -11,7 +11,7 @@ const PureCssSeasonsBackground = ({ scale }: PureCssSeasonsBackgroundProps) => {
     <>
       <div
         id="seasonsBg"
-        className={`custom-container h-[250px] overflow-x-auto overflow-y-hidden min-[425px]:h-[450px] min-[425px]:scale-100 ${scale} `}
+        className={`custom-container h-[250px] overflow-x-auto overflow-y-hidden min-[425px]:h-[450px] min-[425px]:scale-100 [&::-webkit-scrollbar]:h-4 ${scale} `}
       >
         <div className="season"></div>
         <div className="sunnyDay left-[50px] scale-50 min-[425px]:left-[150px] min-[425px]:scale-100"></div>
