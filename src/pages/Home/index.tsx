@@ -1,43 +1,17 @@
-import { motion } from 'framer-motion';
-import { useCallback, useEffect, useState } from 'react';
-
 import photo from '../../assets/img/photo.jpg';
 import Code from '../../assets/svg/code.svg?react';
 import Database from '../../assets/svg/database.svg?react';
 import HardDrive from '../../assets/svg/hard-drive.svg?react';
 import Palette from '../../assets/svg/palette.svg?react';
-import Spinner from '../../assets/svg/spinner.svg?react';
 import SquareMenu from '../../assets/svg/square-menu.svg?react';
 import Card from '../../components/Card';
 import Collapse from '../../components/Collapse';
+import Loading from '../../components/Loading';
 
 const Home = () => {
-  const [loading, setLoading] = useState(true);
-  const changeLoading = useCallback(() => {
-    setLoading(false);
-  }, []);
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    setTimeout(changeLoading, 500);
-  }, [changeLoading]);
   return (
     <>
-      <motion.div
-        className="fixed right-0 z-50 flex items-center justify-center overflow-hidden bg-solidSeason lg:max-w-[calc(100%-360px)]"
-        initial={{ scale: 1, height: '100dvh', width: '100%', borderRadius: 0 }}
-        animate={loading ? 'loading' : 'loaded'}
-        variants={{
-          loading: {},
-          loaded: {
-            top: '50%',
-            rotate: 0,
-            height: 0,
-            transition: { duration: 1, ease: 'easeInOut' },
-          },
-        }}
-      >
-        <Spinner />
-      </motion.div>
+      <Loading />
       <div className="z-10 flex w-full flex-col items-center p-5 text-base sm:p-8 lg:p-14">
         <div className="relative flex min-h-[315px] w-full max-w-[962px] flex-col items-center overflow-hidden rounded-2xl bg-solidPrimary/90 p-6 min-[1201px]:flex-row min-[1201px]:items-start min-[1201px]:py-0 min-[1201px]:pl-0">
           <h1
