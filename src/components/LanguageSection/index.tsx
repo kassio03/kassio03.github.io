@@ -197,7 +197,7 @@ const LanguageSection = () => {
           />
         </div>
       </div>
-      <h3 className="mt-12 text-center text-2xl font-semibold italic">Sagradas Escrituras</h3>
+      <h3 className="mt-12 text-center text-2xl font-semibold italic">{t('bible.title')}</h3>
       <div className="my-4 mt-3 flex flex-col flex-wrap items-center justify-between gap-3 md:flex-row">
         <div className="mx-auto w-full max-w-[538px] shrink grow basis-[250px]">
           <img
