@@ -38,7 +38,7 @@ const CookieConsent = () => {
 
   return (
     <div
-      className={`fixed bottom-0 right-0 z-10 m-3 max-w-[360px] rounded-xl bg-solidSecondary p-3 ${cookiesAlreadySetted ? 'hidden' : 'block'}`}
+      className={`fixed bottom-0 right-0 z-20 m-3 max-w-[360px] rounded-xl bg-solidSecondary p-3 ${cookiesAlreadySetted ? 'hidden' : 'block'}`}
     >
       <p className="mb-3 text-center">
         Este site implementa o Google Analytics. Aceite os cookies para auxiliar no feedback.

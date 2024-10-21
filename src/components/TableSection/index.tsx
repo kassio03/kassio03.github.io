@@ -595,15 +595,20 @@ const TableSection = () => {
               (_, index) => {
                 if (index === 0 || index < currentPage - 1 || index > currentPage + 2) return;
                 return (
-                  <button
-                    className={`m-1 h-6 w-8 rounded first:ml-2 last:mr-2 ${currentPage === index ? 'h-8 !w-10 bg-solidSeason text-sm text-white' : 'bg-solidSecondary text-xs'}`}
-                    key={index}
-                    onClick={() => {
-                      setLoading(() => changePage(index), 200);
-                    }}
-                  >
-                    {index}
-                  </button>
+                  <>
+                    {currentPage === 1 && index === 1 && (
+                      <span className="visible w-11 text-center min-[450px]:invisible">-</span>
+                    )}
+                    <button
+                      className={`m-1 h-6 w-8 rounded first:ml-2 last:mr-2 ${currentPage === index ? 'h-8 !w-10 bg-solidSeason text-sm text-white' : 'bg-solidSecondary text-xs'}`}
+                      key={index}
+                      onClick={() => {
+                        setLoading(() => changePage(index), 200);
+                      }}
+                    >
+                      {index}
+                    </button>
+                  </>
                 );
               },
             )}

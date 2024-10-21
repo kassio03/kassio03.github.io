@@ -8,7 +8,7 @@ const Loading = () => {
     window.scrollTo(0, 0);
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 2000);
   });
   return (
     <motion.div
