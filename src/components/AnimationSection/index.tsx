@@ -149,8 +149,8 @@ const AnimationSection = () => {
             {selectedTab.icon === 'K♥️' && (
               <>
                 <motion.div
-                  className={`relative mt-5 w-full max-w-80 duration-500 ease-out transform-style-3d ${kingOfHeartsAnimationStart ? 'transform rotate-y-180' : 'rotate-y-0'}`}
-                  initial={{ opacity: 0, scaleY: 0.5, rotateX: 90, rotateY: -90 }}
+                  className={`relative mt-5 w-full max-w-80 duration-500 ease-out transform-style-3d ${kingOfHeartsAnimationStart ? 'transform rotate-y-180' : ''}`}
+                  initial={{ opacity: 0, scaleY: 0.5, rotateX: 80, rotateY: -80 }}
                   whileInView={{ scaleY: 1, opacity: 1, rotateX: 0, rotateY: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
