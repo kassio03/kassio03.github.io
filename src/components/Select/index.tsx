@@ -82,7 +82,7 @@ const Select = ({
           </motion.div>
         </motion.button>
         <motion.ul
-          className="absolute w-fit bg-solidSecondary"
+          className="absolute z-10 w-fit bg-solidSecondary"
           variants={{
             open: {
               clipPath: 'inset(0% 0% 0% 0% round 10px)',

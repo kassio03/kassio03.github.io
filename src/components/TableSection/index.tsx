@@ -592,14 +592,6 @@ const TableSection = () => {
             </button>
           </div>
           <div className="flex w-[100px] flex-wrap items-center justify-center min-[450px]:w-auto">
-            {currentPage === 1 && (
-              <button
-                key={generateRandomId()}
-                className="visible ml-2 mr-1 w-8 rounded bg-solidSecondary text-center"
-              >
-                -
-              </button>
-            )}
             {Array.from({ length: Math.ceil(updatedData.length / displayedItemsCount) + 1 }).map(
               (_, index) => {
                 if (!(index === 0 || index < currentPage - 1 || index > currentPage + 2))
