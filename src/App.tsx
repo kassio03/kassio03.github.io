@@ -14,6 +14,7 @@ import CookieConsent from './components/CookiesConsent';
 import Icon from './components/Icon';
 import { useTheme } from './context/ThemeContext';
 import { SeasonTheme } from './theme/handleChangeSeasonTheme';
+import { disableScroll, enableScroll } from './utils/scrollManagement';
 
 const App = () => {
   const [asideMustAppear, setAsideMustAppear] = useState(true);
@@ -43,7 +44,7 @@ const App = () => {
           <Icon Svg={ActiveVisibility} className="h-7 w-7" />
         </button>
         <motion.div
-          className="mt-3 w-60 overflow-hidden rounded-3xl bg-solidSecondary"
+          className="mt-3 w-full max-w-80 overflow-hidden rounded-3xl bg-solidSecondary"
           animate={openedConfig ? 'open' : 'closed'}
           transition={{ duration: 0.2 }}
           variants={{
@@ -60,9 +61,22 @@ const App = () => {
               <p className="px-5 text-center text-xs text-solidTextPrimary/70">
                 Ative para ver melhor o plano de fundo.
               </p>
+              {currentTheme.seasonTheme === SeasonTheme.default && (
+                <p className="px-5 text-center text-xs text-yellow-300/70">
+                  Não há um plano de fundo ativo no momento.
+                </p>
+              )}
               <div
-                className="flex h-10 cursor-pointer items-center gap-3 bg-solidTertiary pl-5"
-                onClick={() => setHideUserInterface(!hideUserInterface)}
+                className="mt-1 flex h-10 cursor-pointer items-center gap-3 bg-solidTertiary pl-5"
+                onClick={() => {
+                  setHideUserInterface(!hideUserInterface);
+                  if (!hideUserInterface) {
+                    disableScroll();
+                  } else {
+                    enableScroll();
+                  }
+                  setOpenedConfig(false);
+                }}
               >
                 <div className={`h-7 w-7`}>
                   <CheckboxIcon
@@ -99,7 +113,7 @@ const App = () => {
         </motion.div>
       </div>
       <div
-        className={`w-full transition-opacity duration-500 ${hideUserInterface ? 'opacity-0' : 'opacity-100'} `}
+        className={`w-full transition-opacity duration-500 ${hideUserInterface ? 'pointer-events-none opacity-0' : 'opacity-100'} `}
       >
         <Outlet />
       </div>
