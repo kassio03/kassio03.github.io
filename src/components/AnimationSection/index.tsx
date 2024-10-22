@@ -155,10 +155,10 @@ const AnimationSection = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
                 >
-                  <div className="absolute w-full backface-hidden">
+                  <div className="absolute w-full backface-hidden [transform:rotateX(0deg)]">
                     <KingOfHearts />
                   </div>
-                  <div className="absolute h-full transform rotate-y-180 backface-hidden">
+                  <div className="absolute h-full transform rotate-y-180 backface-hidden [transform:rotateX(0deg)]">
                     <CardBackface className="h-full w-full" preserveAspectRatio="none" />
                   </div>
                   <div className="invisible">
