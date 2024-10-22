@@ -69,13 +69,22 @@ const Home = () => {
           <Collapse Svg={HardDrive} title="TECNOLOGIAS BACK END">
             <ul className="flex flex-wrap items-stretch gap-3 p-3">
               <li className="flex-shrink flex-grow basis-[240px]">
-                <Card title="Node.js" paragraph="Criação de API" />
+                <Card
+                  title="Node.js"
+                  paragraph="No desenvolvimento backend com Node.js, utilizo o Express para criar APIs leves e rápidas, aproveitando sua simplicidade e flexibilidade para definir rotas, middlewares e lógica de negócios."
+                />
               </li>
               <li className="flex-shrink flex-grow basis-[240px]">
-                <Card title="NestJS" paragraph="modularização injecao de dependencia" />
+                <Card
+                  title="NestJS"
+                  paragraph="Com NestJS, crio arquiteturas modulares e de fácil manutenção, aplicando boas práticas como injeção de dependências e programação orientada a objetos no desenvolvimento de APIs."
+                />
               </li>
               <li className="flex-shrink flex-grow basis-[240px]">
-                <Card title="Spring Boot" paragraph="sintaxe semelhante ao nest" />
+                <Card
+                  title="Spring Boot"
+                  paragraph="Spring Boot me permite desenvolver APIs e serviços de backend de maneira similar ao NestJS, com foco em modularidade e facilidade de manutenção, além de uma configuração mínima para produtividade máxima."
+                />
               </li>
             </ul>
           </Collapse>
@@ -121,14 +130,14 @@ const Home = () => {
             <ul className="flex flex-wrap items-stretch gap-3 p-3">
               <li className="flex-shrink flex-grow basis-[240px]">
                 <Card
-                  title="postgres"
-                  paragraph="Lorem ipsum ante primis in faucibus orci luctus et ultrices posuere cubilia laoreet."
+                  title="PostgreSQL"
+                  paragraph="Uso o Postgres como banco de dados relacional para sistemas que exigem consultas complexas e integridade transacional."
                 />
               </li>
               <li className="flex-shrink flex-grow basis-[240px]">
                 <Card
-                  title="mongodb"
-                  paragraph="Lorem ipsum ante primis in faucibus orci luctus et ultrices posuere cubilia laoreet."
+                  title="MongoDB"
+                  paragraph="Utilizo MongoDB em aplicações que exigem flexibilidade de dados não estruturados, permitindo escalabilidade horizontal e manipulação eficiente de grandes volumes de documentos."
                 />
               </li>
             </ul>
@@ -137,14 +146,14 @@ const Home = () => {
             <ul className="flex flex-wrap items-stretch gap-3 p-3">
               <li className="flex-shrink flex-grow basis-[240px]">
                 <Card
-                  title="clean code"
-                  paragraph="Lorem ipsum ante primis in faucibus orci luctus et ultrices posuere cubilia laoreet."
+                  title="Clean Code"
+                  paragraph="Tenho uma forte preocupação em escrever código legível e de fácil manutenção, busco aplicar os princípios de Clean Code para garantir que o sistema seja compreensível e evolutivo ao longo do tempo."
                 />
               </li>
               <li className="flex-shrink flex-grow basis-[240px]">
                 <Card
-                  title="redux-saga"
-                  paragraph="Lorem ipsum ante primis in faucibus orci luctus et ultrices posuere cubilia laoreet."
+                  title="Gerenciamento de Estado"
+                  paragraph="Utilizo Context API e Redux para gerenciar o estado de forma eficaz, combinando Redux-Saga para lidar com efeitos colaterais assíncronos e Redux-Persist para garantir a persistência dos dados entre sessões."
                 />
               </li>
             </ul>
