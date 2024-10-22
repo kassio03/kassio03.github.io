@@ -597,7 +597,9 @@ const TableSection = () => {
                 return (
                   <>
                     {currentPage === 1 && index === 1 && (
-                      <span className="visible w-11 text-center min-[450px]:invisible">-</span>
+                      <span className="visible ml-2 mr-1 w-8 rounded bg-solidSecondary text-center">
+                        -
+                      </span>
                     )}
                     <button
                       className={`m-1 h-6 w-8 rounded first:ml-2 last:mr-2 ${currentPage === index ? 'h-8 !w-10 bg-solidSeason text-sm text-white' : 'bg-solidSecondary text-xs'}`}
