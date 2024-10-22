@@ -8,6 +8,7 @@ import TablesIcon from '../../assets/svg/tables.svg?react';
 import { RootReducerState } from '../../store/modules/rootReducer';
 import * as actions from '../../store/modules/simulatedReq/actions';
 import { SaleRecord } from '../../store/modules/simulatedReq/types';
+import generateRandomId from '../../utils/generateRandomId';
 import Icon from '../Icon';
 import Select from '../Select';
 
@@ -547,9 +548,9 @@ const TableSection = () => {
                       <td className="text-nowrap pr-12">{saleRecord['payment-method']}</td>
                       <td className="text-nowrap pr-8">
                         <div className="flex">
-                          {Array.from({ length: saleRecord.rating }).map((_, index) => (
+                          {Array.from({ length: saleRecord.rating }).map(() => (
                             <Star
-                              key={index}
+                              key={generateRandomId()}
                               className="ml-1 stroke-solidTextPrimary/30 stroke-1 first:ml-0"
                             />
                           ))}
@@ -591,27 +592,28 @@ const TableSection = () => {
             </button>
           </div>
           <div className="flex w-[100px] flex-wrap items-center justify-center min-[450px]:w-auto">
+            {currentPage === 1 && (
+              <button
+                key={generateRandomId()}
+                className="visible ml-2 mr-1 w-8 rounded bg-solidSecondary text-center"
+              >
+                -
+              </button>
+            )}
             {Array.from({ length: Math.ceil(updatedData.length / displayedItemsCount) + 1 }).map(
               (_, index) => {
-                if (index === 0 || index < currentPage - 1 || index > currentPage + 2) return;
-                return (
-                  <>
-                    {currentPage === 1 && index === 1 && (
-                      <span className="visible ml-2 mr-1 w-8 rounded bg-solidSecondary text-center">
-                        -
-                      </span>
-                    )}
+                if (!(index === 0 || index < currentPage - 1 || index > currentPage + 2))
+                  return (
                     <button
+                      key={generateRandomId()}
                       className={`m-1 h-6 w-8 rounded first:ml-2 last:mr-2 ${currentPage === index ? 'h-8 !w-10 bg-solidSeason text-sm text-white' : 'bg-solidSecondary text-xs'}`}
-                      key={index}
                       onClick={() => {
                         setLoading(() => changePage(index), 200);
                       }}
                     >
                       {index}
                     </button>
-                  </>
-                );
+                  );
               },
             )}
           </div>
