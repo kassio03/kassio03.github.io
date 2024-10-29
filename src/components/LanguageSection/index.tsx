@@ -2,9 +2,9 @@ import { motion, Variants } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import bible from '../../assets/img/bible.jpg';
-import isaacNewton from '../../assets/img/isaac-newton.png';
-import nikolaTesla from '../../assets/img/nikola-tesla.jpg';
+import bible from '../../assets/img/min/bible.jpg';
+import isaacNewton from '../../assets/img/min/isaac-newton.png';
+import nikolaTesla from '../../assets/img/min/nikola-tesla.jpg';
 import ArrowDown from '../../assets/svg/arrow-down.svg?react';
 import FlagBrazil from '../../assets/svg/flagBrazil.svg?react';
 import FlagFrance from '../../assets/svg/flagFrance.svg?react';

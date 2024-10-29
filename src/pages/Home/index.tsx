@@ -1,4 +1,4 @@
-import photo from '../../assets/img/photo.jpg';
+import photo from '../../assets/img/min/photo.jpg';
 import Code from '../../assets/svg/code.svg?react';
 import Database from '../../assets/svg/database.svg?react';
 import HardDrive from '../../assets/svg/hard-drive.svg?react';

@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 import { useCallback, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 
-import AutumnBackground from './assets/img/background-autumn.jpg';
-import SpringBackground from './assets/img/background-spring.jpg';
-import SummerBackground from './assets/img/background-summer.jpg';
-import WinterBackground from './assets/img/background-winter.jpg';
+import AutumnBackground from './assets/img/min/background-autumn.jpg';
+import SpringBackground from './assets/img/min/background-spring.jpg';
+import SummerBackground from './assets/img/min/background-summer.jpg';
+import WinterBackground from './assets/img/min/background-winter.jpg';
 import ActiveVisibility from './assets/svg/active-visibility.svg?react';
 import CheckboxIcon from './assets/svg/checkbox.svg?react';
 import HamburgerMenu from './assets/svg/hamburger-menu.svg?react';
