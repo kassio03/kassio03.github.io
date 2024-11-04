@@ -32,10 +32,12 @@ const allIdsToObserver = {
     { id: 'animation', label: 'Animações' },
     { id: 'language', label: 'Idiomas' },
     { id: 'table', label: 'Tabelas' },
+    { id: 'backend', label: 'Back End' },
     { id: 'graphics', label: 'Gráficos' },
-    /* { id: 'form', label: 'Formulários' },
+    /*
     { id: 'database', label: 'Banco de Dados' },
-    { id: 'other', label: 'Outro' }, */
+    { id: 'other', label: 'Outro' },
+    */
   ],
 };
 

@@ -1,4 +1,5 @@
 import AnimationSection from '../../components/AnimationSection';
+import BackEndSection from '../../components/BackEndSection';
 import GraphicsSection from '../../components/GraphicsSection';
 import LanguageSection from '../../components/LanguageSection';
 import Loading from '../../components/Loading';
@@ -14,6 +15,7 @@ const Functionalities = () => {
         <AnimationSection />
         <LanguageSection />
         <TableSection />
+        <BackEndSection />
         <GraphicsSection />
       </div>
     </>
