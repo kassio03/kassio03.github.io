@@ -38,13 +38,13 @@ const App = () => {
       )}
       <div className="fixed right-0 z-20 m-5 flex flex-col">
         <button
-          className="ml-auto w-fit rounded-full bg-solidSecondary p-2"
+          className="absolute right-0 w-fit rounded-full bg-solidSecondary p-2"
           onClick={() => setOpenedConfig(pv => !pv)}
         >
           <Icon Svg={ActiveVisibility} className="h-7 w-7" />
         </button>
         <motion.div
-          className="mt-3 w-full max-w-80 overflow-hidden rounded-3xl bg-solidSecondary"
+          className="mt-12 w-full max-w-80 overflow-hidden rounded-3xl bg-solidSecondary"
           animate={openedConfig ? 'open' : 'closed'}
           transition={{ duration: 0.2 }}
           variants={{
