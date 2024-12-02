@@ -23,7 +23,7 @@ const MTListApp = () => {
     dispatch(actions.logout());
   };
   return (
-    <div className="flex flex-col overflow-hidden rounded-[20px] bg-[#545454] px-6 pb-8 pt-3 text-justify text-sm leading-[17px]">
+    <div className="relative flex flex-col overflow-hidden rounded-[20px] bg-[#545454] px-6 pb-8 pt-3 text-justify text-sm leading-[17px]">
       <header className="flex items-center justify-between">
         <img
           src={logo}
