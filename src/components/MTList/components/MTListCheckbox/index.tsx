@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { InputHTMLAttributes, useState } from 'react';
 
 import DoneSvg from '../../assets/done.svg?react';
 
-interface MTListCheckboxProps {
+interface MTListCheckboxProps extends InputHTMLAttributes<HTMLInputElement> {
   id: string;
 }
 
-const MTListCheckbox = ({ id }: MTListCheckboxProps) => {
+const MTListCheckbox = ({ id, ...rest }: MTListCheckboxProps) => {
   const [checked, setChecked] = useState(false);
   const invertCheckedValue = () => {
     setChecked(previousValue => !previousValue);
@@ -26,6 +26,7 @@ const MTListCheckbox = ({ id }: MTListCheckboxProps) => {
         onChange={invertCheckedValue}
         type="checkbox"
         className="invisible h-0 w-0"
+        {...rest}
       />
     </div>
   );
