@@ -11,7 +11,7 @@ export const loadSuccess = (data: SaleRecord[]) => {
 };
 
 export const loadFailure = () => {
-  return action(ActionTypes.LOAD_SUCCESS);
+  return action(ActionTypes.LOAD_FAILURE);
 };
 
 export const setLoading = (loading: boolean) => {

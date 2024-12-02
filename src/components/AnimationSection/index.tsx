@@ -88,7 +88,7 @@ const AnimationSection = () => {
       <div className="mt-6">
         <p>
           Cada uma das quatro cartas abaixo, representando os reis dos diferentes naipes do baralho,
-          traz duas animações únicas: uma ao ser revelada e outra executava ao clicar no botão logo
+          traz duas animações únicas: uma ao ser revelada e outra executada ao clicar no botão logo
           abaixo da carta.
         </p>
         <p className="mt-3">

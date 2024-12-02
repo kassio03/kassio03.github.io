@@ -1,4 +1,6 @@
-import { ActionTypes, ReqState } from './types';
+import { PayloadAction } from 'typesafe-actions';
+
+import { ActionTypes, ReqState, SaleRecord } from './types';
 
 const INITIAL_STATE: ReqState = {
   loading: false,
@@ -6,7 +8,10 @@ const INITIAL_STATE: ReqState = {
   data: [],
 };
 
-const reducer = (state = INITIAL_STATE, action: any): ReqState => {
+const reducer = (
+  state = INITIAL_STATE,
+  action: PayloadAction<ActionTypes, { data: SaleRecord[] }>,
+): ReqState => {
   switch (action.type) {
     case ActionTypes.LOAD_REQUEST:
       return {
@@ -30,7 +35,7 @@ const reducer = (state = INITIAL_STATE, action: any): ReqState => {
     case ActionTypes.FAKE_LOADING:
       return {
         ...state,
-        loading: action.payload,
+        loading: !!action.payload,
         error: false,
       };
     default:
