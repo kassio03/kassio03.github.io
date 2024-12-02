@@ -86,7 +86,7 @@ const MTListSignIn = () => {
                   <MTListCheckbox
                     id="keepConnected"
                     name="keepConnected"
-                    onChange={handleChange}
+                    onClick={handleChange}
                     checked={values.keepConnected}
                   />
                   <label className="cursor-pointer pl-2" htmlFor="keepConnected">

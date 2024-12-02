@@ -1,3 +1,4 @@
+import { Field } from 'formik';
 import { InputHTMLAttributes, useState } from 'react';
 
 import DoneSvg from '../../assets/done.svg?react';
@@ -15,12 +16,13 @@ const MTListCheckbox = ({ id, ...rest }: MTListCheckboxProps) => {
   return (
     <div className="inline-block h-5 w-5">
       <button
+        type="button"
         className={`h-full w-full rounded-[5px] border-[1px] border-[#FFB573] ${checked ? 'bg-[#FFB573]' : ''}`}
         onClick={invertCheckedValue}
       >
         {checked && <DoneSvg className="m-[2px]" fill="#545454" />}
       </button>
-      <input
+      <Field
         id={id}
         checked={checked}
         onChange={invertCheckedValue}
