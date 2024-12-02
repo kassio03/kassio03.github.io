@@ -9,6 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
+      VITE_ENVIRONMENT: ${{ secrets.VITE_ENVIRONMENT }}
       VITE_TRACKING_ID: ${{ secrets.VITE_TRACKING_ID }}
     steps:
       - name: Clone repository
