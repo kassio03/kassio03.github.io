@@ -1,7 +1,11 @@
 import { Form, Formik } from 'formik';
 import { motion } from 'framer-motion';
 import { useRef, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
 
+import { store } from '../../../../store/configureStore';
+import * as actions from '../../../../store/modules/mtlist/user';
 import EmailSvg from '../../assets/email.svg?react';
 import LockSvg from '../../assets/lock.svg?react';
 import NameSvg from '../../assets/name.svg?react';
@@ -10,14 +14,24 @@ import MTListButton from '../../components/MTListButton';
 import MTListCheckbox from '../../components/MTListCheckbox';
 import MTListDialog from '../../components/MTListDialog';
 import MTListInput from '../../components/MTListInput';
+import { Pages, useEndpoint } from '../../contexts/EndpointContext';
 import signUpValidationSchema from './validationSchema';
 
 const MTListSignUp = () => {
+  const dispatch = useDispatch();
+
   const dialogRef = useRef(null);
   const [dialog, setDialog] = useState(false);
 
-  const handleFormikSubmit = (
-    values: {
+  const { setCurrentPage } = useEndpoint();
+
+  const handleFormikSubmit = async (
+    {
+      name,
+      email,
+      password,
+      repeatPassword,
+    }: {
       name: string;
       email: string;
       password: string;
@@ -25,7 +39,34 @@ const MTListSignUp = () => {
     },
     { setSubmitting }: any,
   ) => {
-    /* dispatch para cadastro no db */
+    if (password === repeatPassword) {
+      dispatch(actions.registerRequest({ name, email, password }));
+      const unsubscribe = store.subscribe(() => {
+        const state = store.getState().UserReducer;
+        if (state.error) toast.error('Erro ao realizar cadastro. Tente novamente.');
+        if (!state.loading) {
+          toast.success('Cadastro realizado com sucesso!', {
+            position: 'bottom-left',
+            hideProgressBar: true,
+            closeOnClick: true,
+          });
+          toast.info('Redirecionando para login', {
+            delay: 2000,
+            autoClose: 3000,
+            onClose: () => setCurrentPage(Pages.signIn),
+            position: 'bottom-left',
+          });
+          setSubmitting(false);
+          unsubscribe();
+        }
+      });
+    } else {
+      toast.error('Senhas não coincidem.', {
+        position: 'bottom-left',
+        hideProgressBar: true,
+        closeOnClick: true,
+      });
+    }
   };
   return (
     <motion.div
@@ -108,13 +149,8 @@ const MTListSignUp = () => {
                 <p className="-mb-4 mt-1 text-[#FF7375]">{errors.repeatPassword}</p>
               )}
               <div className="mt-6 flex items-center">
-                <MTListCheckbox
-                  id="terms"
-                  name="terms"
-                  onClick={handleChange}
-                  checked={values.terms}
-                />
-                <label className="cursor-pointer pl-2 font-bold" htmlFor="terms">
+                <MTListCheckbox id="terms" name="terms" onClick={handleChange} />
+                <label className="-ml-5 cursor-pointer pl-7 font-bold" htmlFor="terms">
                   Li e concordo com os{' '}
                   <a
                     className="cursor-pointer text-[#FFB573] underline underline-offset-4"
