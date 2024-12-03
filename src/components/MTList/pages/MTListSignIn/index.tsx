@@ -83,12 +83,17 @@ const MTListSignIn = () => {
               )}
               <div className="mt-6 flex justify-between bg-green-900">
                 <div className="flex items-center">
-                  <MTListCheckbox id="keepConnected" name="keepConnected" onClick={handleChange} />
+                  <MTListCheckbox
+                    id="keepConnected"
+                    defaultChecked
+                    name="keepConnected"
+                    onClick={handleChange}
+                  />
                   <label className="-ml-5 cursor-pointer pl-7" htmlFor="keepConnected">
                     Manter conectado
                   </label>
                 </div>
-                <a className="cursor-pointer font-bold text-[#FFB573] underline underline-offset-4">
+                <a className="invisible cursor-pointer font-bold text-[#FFB573] underline underline-offset-4">
                   Esqueceu a senha?
                 </a>
               </div>
