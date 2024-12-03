@@ -1,6 +1,5 @@
 import { Form, Formik } from 'formik';
 import { motion } from 'framer-motion';
-import { useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 
@@ -14,14 +13,14 @@ import MTListButton from '../../components/MTListButton';
 import MTListCheckbox from '../../components/MTListCheckbox';
 import MTListDialog from '../../components/MTListDialog';
 import MTListInput from '../../components/MTListInput';
+import { useDialog } from '../../contexts/DialogContext';
 import { Pages, useEndpoint } from '../../contexts/EndpointContext';
 import signUpValidationSchema from './validationSchema';
 
 const MTListSignUp = () => {
   const dispatch = useDispatch();
 
-  const dialogRef = useRef(null);
-  const [dialog, setDialog] = useState(false);
+  const { openDialogElement } = useDialog();
 
   const { setCurrentPage } = useEndpoint();
 
@@ -156,7 +155,21 @@ const MTListSignUp = () => {
                     className="cursor-pointer text-[#FFB573] underline underline-offset-4"
                     onClick={e => {
                       e.preventDefault();
-                      setDialog(true);
+                      openDialogElement(
+                        <MTListDialog closeButton>
+                          <h2 className="mt-2 font-bold text-[#FFB573]">Termos de Uso</h2>
+                          <p>
+                            Bem-vindo ao My Task List! Antes de continuar, por favor, leia
+                            atentamente os seguintes Termos de Uso.
+                          </p>
+                          <h3 className="mt-2 font-bold text-[#FFB573]">Uso Geral</h3>
+                          <p>
+                            Este aplicativo foi desenvolvido para fins de demonstração e
+                            aprendizado. As funcionalidades apresentadas têm como objetivo destacar
+                            habilidades técnicas e não representam um produto final ou comercial.
+                          </p>
+                        </MTListDialog>,
+                      );
                     }}
                   >
                     termos de uso.
@@ -173,21 +186,6 @@ const MTListSignUp = () => {
           )}
         </Formik>
       </div>
-      {dialog && (
-        <MTListDialog ref={dialogRef} setDialog={setDialog} closeButton>
-          <h2 className="mt-2 font-bold text-[#FFB573]">Termos de Uso</h2>
-          <p>
-            Bem-vindo ao My Task List! Antes de continuar, por favor, leia atentamente os seguintes
-            Termos de Uso.
-          </p>
-          <h3 className="mt-2 font-bold text-[#FFB573]">Uso Geral</h3>
-          <p>
-            Este aplicativo foi desenvolvido para fins de demonstração e aprendizado. As
-            funcionalidades apresentadas têm como objetivo destacar habilidades técnicas e não
-            representam um produto final ou comercial.
-          </p>
-        </MTListDialog>
-      )}
     </motion.div>
   );
 };

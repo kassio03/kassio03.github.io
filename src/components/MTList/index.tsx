@@ -1,10 +1,13 @@
 import MTListApp from './app';
+import { DialogContextProvider } from './contexts/DialogContext';
 import { EndpointContextProvider } from './contexts/EndpointContext';
 
 const MTList = () => {
   return (
     <EndpointContextProvider>
-      <MTListApp />
+      <DialogContextProvider>
+        <MTListApp />
+      </DialogContextProvider>
     </EndpointContextProvider>
   );
 };

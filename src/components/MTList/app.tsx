@@ -10,6 +10,8 @@ import * as actions from '../../store/modules/mtlist/auth';
 import { RootReducerState } from '../../store/modules/rootReducer';
 import MenuSvg from './assets/menu.svg?react';
 import logo from './assets/mtlist-logo.png';
+import MTListDialog from './components/MTListDialog';
+import { useDialog } from './contexts/DialogContext';
 import { Pages, useEndpoint } from './contexts/EndpointContext';
 import MTListAbout from './pages/MTListAbout';
 import MTListHome from './pages/MTListHome';
@@ -25,6 +27,8 @@ const MTListApp = () => {
   const logout = () => {
     dispatch(actions.logout());
   };
+  const { openDialogElement } = useDialog();
+
   return (
     <div className="relative flex flex-col overflow-hidden rounded-[20px] bg-[#545454] px-6 pb-8 pt-3 text-justify text-sm leading-[17px]">
       <header className="flex items-center justify-between">
@@ -87,8 +91,18 @@ const MTListApp = () => {
                 <li
                   className={`cursor-pointer`}
                   onClick={() => {
-                    logout();
-                    setCurrentPage(Pages.signIn);
+                    openDialogElement(
+                      <MTListDialog
+                        highlithedButton="SAIR"
+                        highlithedButtonCallback={() => {
+                          logout();
+                          setCurrentPage(Pages.signIn);
+                        }}
+                        genericButton="CANCELAR"
+                      >
+                        Deseja realmente sair?
+                      </MTListDialog>,
+                    );
                   }}
                 >
                   Sair
