@@ -1,3 +1,6 @@
+import 'react-toastify/dist/ReactToastify.css';
+import './overrideStyles.css';
+
 import { AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -103,8 +106,8 @@ const MTListApp = () => {
           {currentPage === Pages.signUp && <MTListSignUp key={'signUp'} />}
           {currentPage === Pages.myList && <MTListMyList key={'myList'} />}
         </AnimatePresence>
+        <ToastContainer />
       </section>
-      <ToastContainer />
     </div>
   );
 };
