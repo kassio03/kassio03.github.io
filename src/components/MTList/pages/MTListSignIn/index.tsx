@@ -81,15 +81,10 @@ const MTListSignIn = () => {
               {errors.password && touched.password && (
                 <p className="-mb-4 mt-1 text-[#FF7375]">{errors.password}</p>
               )}
-              <div className="mt-6 flex justify-between">
+              <div className="mt-6 flex justify-between bg-green-900">
                 <div className="flex items-center">
-                  <MTListCheckbox
-                    id="keepConnected"
-                    name="keepConnected"
-                    onClick={handleChange}
-                    checked={values.keepConnected}
-                  />
-                  <label className="cursor-pointer pl-2" htmlFor="keepConnected">
+                  <MTListCheckbox id="keepConnected" name="keepConnected" onClick={handleChange} />
+                  <label className="-ml-5 cursor-pointer pl-7" htmlFor="keepConnected">
                     Manter conectado
                   </label>
                 </div>
@@ -99,7 +94,10 @@ const MTListSignIn = () => {
               </div>
               <p className="mb-8 mt-3">
                 Não possui uma conta?{' '}
-                <a className="cursor-pointer font-bold text-[#FFB573] underline underline-offset-4">
+                <a
+                  className="cursor-pointer font-bold text-[#FFB573] underline underline-offset-4"
+                  onClick={() => setCurrentPage(Pages.signUp)}
+                >
                   Crie uma!
                 </a>
               </p>

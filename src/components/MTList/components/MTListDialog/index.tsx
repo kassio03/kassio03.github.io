@@ -38,7 +38,7 @@ const MTListDialog = (
       <div className="flex w-full max-w-80 flex-col items-center rounded-[10px] bg-[#545454] p-3">
         {closeButton && (
           <MTListButton
-            className="ml-auto mr-0 !w-10 bg-[#6C6C6C] hover:bg-[#636363]"
+            className="ml-auto mr-0 !w-10 !bg-[#6C6C6C] hover:!bg-[#636363]"
             onClick={closeDialog}
           >
             X
