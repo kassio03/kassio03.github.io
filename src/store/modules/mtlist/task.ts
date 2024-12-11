@@ -112,16 +112,9 @@ export const deleteTask = ({ id }: { id: string }) => {
 const BASE_URL =
   import.meta.env.VITE_ENVIRONMENT === 'production' ? 'production_url' : 'http://localhost:3000';
 
-const requestConfig = {
-  headers: {
-    'Content-Type': 'application/json',
-    Authorization: `Bearer ${JSON.parse((await localStorage.getItem('persist:auth')) || JSON.stringify({ token: null })).token.replaceAll('"', '')}`,
-  },
-};
-
 export function* mtlistGetAllTasks() {
   try {
-    const response: AxiosResponse = yield Eff.call(axios.get, `${BASE_URL}/task`, requestConfig);
+    const response: AxiosResponse = yield Eff.call(axios.get, `${BASE_URL}/task`);
     yield Eff.put(requestSuccess({ tasks: response.data.body }));
   } catch (err) {
     yield Eff.put(requestFailure());
@@ -130,16 +123,11 @@ export function* mtlistGetAllTasks() {
 export function* mtlistCreateTask(action: PayloadAction<TaskTypes, createTaskDto>) {
   const { title, description, date } = action.payload;
   try {
-    yield Eff.call(
-      axios.post,
-      `${BASE_URL}/task`,
-      {
-        title,
-        description,
-        date,
-      },
-      requestConfig,
-    );
+    yield Eff.call(axios.post, `${BASE_URL}/task`, {
+      title,
+      description,
+      date,
+    });
     yield mtlistGetAllTasks();
   } catch (err) {
     yield Eff.put(requestFailure());
@@ -148,16 +136,11 @@ export function* mtlistCreateTask(action: PayloadAction<TaskTypes, createTaskDto
 export function* mtlistUpdateTask(action: PayloadAction<TaskTypes, updateTaskDto>) {
   const { id, title, description, state } = action.payload;
   try {
-    yield Eff.call(
-      axios.patch,
-      `${BASE_URL}/task/${id}`,
-      {
-        title,
-        description,
-        state,
-      },
-      requestConfig,
-    );
+    yield Eff.call(axios.patch, `${BASE_URL}/task/${id}`, {
+      title,
+      description,
+      state,
+    });
     yield mtlistGetAllTasks();
   } catch (err) {
     yield Eff.put(requestFailure());
@@ -166,7 +149,7 @@ export function* mtlistUpdateTask(action: PayloadAction<TaskTypes, updateTaskDto
 export function* mtlistDeleteTask(action: PayloadAction<TaskTypes, { id: string }>) {
   const { id } = action.payload;
   try {
-    yield Eff.call(axios.delete, `${BASE_URL}/task/${id}`, requestConfig);
+    yield Eff.call(axios.delete, `${BASE_URL}/task/${id}`);
     yield mtlistGetAllTasks();
   } catch (err) {
     yield Eff.put(requestFailure());
