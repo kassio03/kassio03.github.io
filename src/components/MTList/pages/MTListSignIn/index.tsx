@@ -81,7 +81,7 @@ const MTListSignIn = () => {
               {errors.password && touched.password && (
                 <p className="-mb-4 mt-1 text-[#FF7375]">{errors.password}</p>
               )}
-              <div className="mt-6 flex justify-between bg-green-900">
+              <div className="mt-6 flex hidden justify-between">
                 <div className="flex items-center">
                   <MTListCheckbox
                     id="keepConnected"
@@ -93,7 +93,7 @@ const MTListSignIn = () => {
                     Manter conectado
                   </label>
                 </div>
-                <a className="invisible cursor-pointer font-bold text-[#FFB573] underline underline-offset-4">
+                <a className="cursor-pointer font-bold text-[#FFB573] underline underline-offset-4">
                   Esqueceu a senha?
                 </a>
               </div>
