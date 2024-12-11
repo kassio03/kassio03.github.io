@@ -15,13 +15,75 @@ const BackEndSection = () => {
         </h2>
       </header>
       <div className="mb-8 mt-6 w-full">
-        <p className="text-yellow-300">Descrição da seção, seção atualmente em construção!</p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet augue sit amet
-          purus pharetra maximus. Praesent a eleifend turpis. Integer lectus metus, tempor eget
-          rhoncus a, pellentesque at erat. Vivamus id venenatis dui, vitae iaculis magna. Phasellus
-          ut nulla nec orci sagittis efficitur.
+          MTList (My Task List), é uma aplicação que permite a gestão eficaz de tarefas (tasks).
+          Criado com o intuito de facilitar o gerenciamento, o MTList oferece uma interface
+          intuitiva onde você pode criar, visualizar, editar e excluir tarefas.
         </p>
+        <p className="my-3">
+          Essa aplicação faz uso de uma api, disponível em:{' '}
+          <a
+            className="font-bold text-solidSeason underline"
+            target="_blank"
+            href="https://github.com/kassio03?tab=repositories"
+            rel="noreferrer"
+          >
+            MTList API
+          </a>
+          . Entregando os métodos:
+        </p>
+        <ul className="flex flex-col">
+          <li className="flex gap-3">
+            <div className="flex flex-col items-center">
+              <p className="text-xl font-bold text-[#88E475]">C</p>
+              <p className="text-solidSeason">|</p>
+            </div>
+            <div>
+              <p className="text-xl text-[#88E475]">Create</p>
+              <p>
+                Crie tarefas com título, descrição (opcional) e uma data em que espera concluí-la.
+              </p>
+            </div>
+          </li>
+          <li className="flex gap-3">
+            <div className="flex flex-col items-center">
+              <p className="text-xl font-bold text-[#A4C0CA]">R </p>
+              <p className="text-solidSeason">|</p>
+            </div>
+            <div>
+              <p className="text-xl text-[#A4C0CA]">Read</p>
+              <p>
+                As tarefas são salvas em um banco de dados para que você possa sempre consultá-las.
+              </p>
+            </div>
+          </li>
+          <li className="flex gap-3">
+            <div className="flex flex-col items-center">
+              <p className="text-xl font-bold text-[#FFDE73]">U </p>
+              <p className="text-solidSeason">|</p>
+            </div>
+            <div>
+              <p className="text-xl text-[#FFDE73]">Update</p>
+              <p>
+                Faltou algum detalhe na tarefa? Você pode atualizar o título e descrição depois de
+                criá-la.
+              </p>
+            </div>
+          </li>
+          <li className="flex gap-3">
+            <div className="flex flex-col items-center">
+              <p className="text-xl font-bold text-[#FF7375]">D </p>
+              <p className="text-solidSeason">|</p>
+            </div>
+            <div>
+              <p className="text-xl text-[#FF7375]">Delete</p>
+              <p>
+                Quer remover uma tarefa? Você pode deletá-la com um{' '}
+                <strong className="text-solidSeason">duplo clique no ícone</strong>.
+              </p>
+            </div>
+          </li>
+        </ul>
       </div>
       <MTList />
     </section>
