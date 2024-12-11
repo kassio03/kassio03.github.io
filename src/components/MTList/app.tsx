@@ -30,7 +30,7 @@ const MTListApp = () => {
   const { openDialogElement } = useDialog();
 
   return (
-    <div className="relative flex flex-col overflow-hidden rounded-[20px] bg-[#545454] px-6 pb-8 pt-3 text-justify text-sm leading-[17px]">
+    <div className="relative flex flex-col overflow-hidden rounded-[20px] bg-[#545454] px-6 pb-8 pt-3 text-justify text-xs leading-[17px] md:text-sm">
       <header className="flex items-center justify-between">
         <img
           src={logo}
