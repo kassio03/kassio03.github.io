@@ -9,7 +9,7 @@ interface MTListCheckboxProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 const MTListCheckbox = ({ id, defaultChecked, ...rest }: MTListCheckboxProps) => {
-  const [checked, setChecked] = useState(defaultChecked);
+  const [checked, setChecked] = useState(!!defaultChecked);
 
   return (
     <div className="inline-block h-5 w-5">

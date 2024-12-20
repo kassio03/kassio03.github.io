@@ -39,6 +39,7 @@ const MTListSignUp = () => {
     { setSubmitting }: any,
   ) => {
     if (password === repeatPassword) {
+      /*
       dispatch(actions.registerRequest({ name, email, password }));
       const unsubscribe = store.subscribe(() => {
         const state = store.getState().UserReducer;
@@ -59,6 +60,8 @@ const MTListSignUp = () => {
           unsubscribe();
         }
       });
+      */
+      toast.info('API em desenvolvimento!', { position: 'bottom-left' });
     } else {
       toast.error('Senhas não coincidem.', {
         position: 'bottom-left',

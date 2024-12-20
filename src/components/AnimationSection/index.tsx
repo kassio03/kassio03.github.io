@@ -37,8 +37,9 @@ const Button = ({ children, ...rest }: ButtonProps) => {
             transition: { duration: 0.5, delay: 0 },
           },
         }}
+        /* Fix color to change properly */
         whileHover={{
-          backgroundColor: 'hsl(var(--color-solid-seasons))',
+          backgroundColor: '#747474',
           y: -5,
           boxShadow: '0px 2px 5px #1D1D1D',
           textShadow: '0px 2px 5px #1D1D1D',

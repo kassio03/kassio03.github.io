@@ -15,6 +15,18 @@ const BackEndSection = () => {
         </h2>
       </header>
       <div className="mb-8 mt-6 w-full">
+        <p className="text-lg font-bold text-yellow-600">Seção em desenvolvimento!</p>
+        <p className="mb-3 text-yellow-600">
+          API em desenvolvimento. Enquanto construímos a API, as páginas{' '}
+          <strong>
+            <i>Iniciar sessão</i>
+          </strong>{' '}
+          e{' '}
+          <strong>
+            <i>Criar uma conta</i>
+          </strong>
+          , que requerem acesso ao banco de dados, permanecerão inabilitadas.
+        </p>
         <p>
           MTList (My Task List), é uma aplicação que permite a gestão eficaz de tarefas (tasks).
           Criado com o intuito de facilitar o gerenciamento, o MTList oferece uma interface
@@ -25,7 +37,7 @@ const BackEndSection = () => {
           <a
             className="font-bold text-solidSeason underline"
             target="_blank"
-            href="https://github.com/kassio03?tab=repositories"
+            href="https://github.com/kassio03/mtlist-api"
             rel="noreferrer"
           >
             MTList API

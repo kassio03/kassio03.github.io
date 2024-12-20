@@ -4,6 +4,7 @@ import { Form, Formik } from 'formik';
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 
 import * as actions from '../../../../store/modules/mtlist/auth';
 import { RootReducerState } from '../../../../store/modules/rootReducer';
@@ -21,11 +22,18 @@ const MTListSignIn = () => {
   const result = useSelector((state: RootReducerState) => state.AuthReducer);
   const { setCurrentPage } = useEndpoint();
 
-  const handleFormikSubmit = (
+  /* const handleFormikSubmit = (
     values: { email: string; password: string },
     { setSubmitting }: any,
   ) => {
     dispatch(actions.loginRequest({ email: values.email, password: values.password }));
+    setSubmitting(false);
+  }; */
+  const handleFormikSubmit = (
+    values: { email: string; password: string },
+    { setSubmitting }: any,
+  ) => {
+    toast.info('API em desenvolvimento!');
     setSubmitting(false);
   };
 
