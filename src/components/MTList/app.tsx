@@ -47,7 +47,7 @@ const MTListApp = () => {
           <MenuSvg className="h-full w-full" />
         </button>
         <nav
-          className={`relative z-10 transition-opacity md:block ${menuVisibility ? 'opacity-100' : 'pointer-events-none opacity-0 md:opacity-100 min-[1024px]:opacity-0 min-[1192px]:opacity-100'}`}
+          className={`relative z-10 transition-opacity md:block ${menuVisibility ? 'opacity-100' : 'pointer-events-none opacity-0 md:pointer-events-auto md:opacity-100 min-[1024px]:pointer-events-none min-[1024px]:opacity-0 min-[1192px]:pointer-events-auto min-[1192px]:opacity-100'}`}
         >
           <ul className="absolute right-0 top-5 flex w-40 flex-col items-center gap-6 rounded-[10px] bg-solidTertiary py-3 font-bold md:static md:w-auto md:flex-row md:bg-transparent min-[1024px]:absolute min-[1024px]:w-40 min-[1024px]:flex-col min-[1024px]:bg-solidTertiary min-[1192px]:static min-[1192px]:w-auto min-[1192px]:flex-row min-[1192px]:bg-transparent">
             <li
